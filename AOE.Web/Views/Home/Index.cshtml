@@ -1,0 +1,226 @@
+﻿@{
+    var data = AOE.Web.Controllers.HomeController.GetContent();
+}
+<section id="service" class="service angle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <span class="title-icon pull-left"><i class="fa fa-cogs"></i></span>
+                <h2 class="title">@data.service.title <span class="title-desc">@data.service.title1</span></h2>
+            </div>
+        </div><!-- Title row end -->
+
+        <div class="row">
+            <div class="col-md-12">
+                @foreach (var item in data.service.services)
+                {
+                    <div class="col-md-3 col-sm-3 wow fadeInDown" data-wow-delay=".5s">
+                        <div class="service-content text-center">
+                            <span class="service-icon icon-pentagon"><i class="@item.icon"></i></span>
+                            <h3>@item.title</h3>
+                            <p>@item.title1</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div><!-- Content row end -->
+    </div><!--/ Container end -->
+</section><!--/ Service box end -->
+
+<section id="image-block" class="image-block no-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 ts-padding" style="height:650px;background:url(/images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
+            </div>
+            <div class="col-md-6 ts-padding img-block-right">
+                <div class="img-block-head text-center">
+                    <h2>@data.chooseUs.title0</h2>
+                    <h3>@data.chooseUs.title</h3>
+                    <p>
+                        @data.chooseUs.title1
+                    </p>
+                </div>
+
+                <div class="gap-30"></div>
+                @foreach (var item in data.service.services)
+                {
+                    <div class="image-block-content">
+                        <span class="feature-icon pull-left"><i class="@item.icon"></i></span>
+                        <div class="feature-content">
+                            <h3>@item.title</h3>
+                            <p>@item.title1</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section><!--/ Image block end -->
+<!-- Team start -->
+<section id="team" class="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
+                <h2 class="title">@data.meetTeam.title <span class="title-desc">@data.meetTeam.title1</span></h2>
+            </div>
+        </div><!-- Title row end -->
+
+        <div class="row text-center">
+            @foreach (var item in data.meetTeam.persons)
+            {
+                <div class="col-md-3 col-sm-6">
+                    <div class="team wow slideInLeft">
+                        <div class="img-hexagon">
+                            <img src="@item.img" alt="">
+                            <span class="img-top"></span>
+                            <span class="img-bottom"></span>
+                        </div>
+                        <div class="team-content">
+                            <h3>@item.name</h3>
+                            <p>@item.title</p>
+                            @*<div class="team-social">
+                                    <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+                                    <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+                                    <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+                                    <a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            }
+        </div><!--/ Content row end -->
+    </div><!--/ Container end -->
+</section><!--/ Team end -->
+<!-- Parallax 1 start -->
+@*<section class="parallax parallax1">
+        <div class="parallax-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Are You Ready to Buy This Template!</h2>
+                    <h3>Just Click Button and Use Your Own</h3>
+                    <p>
+                        <a href="#" class="btn btn-primary white">Purchase Now</a>
+                        <a href="#" class="btn btn-primary solid">Get In Touch</a>
+                    </p>
+                </div>
+            </div>
+        </div><!-- Container end -->
+    </section><!-- Parallax 1 end -->*@
+<!-- Pricing table start -->
+<section id="pricing" class="pricing">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading">
+                <span class="title-icon pull-left"><i class="fa fa-university"></i></span>
+                <h2 class="title">Pricing Table <span class="title-desc">We Love to Work with Passion</span></h2>
+            </div>
+        </div><!-- Title row end -->
+        <div class="row">
+            <!-- plan start -->
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="plan text-center">
+                    <span class="plan-name">Basic <small>Monthly plan</small></span>
+                    <p class="plan-price"><sup class="currency">$</sup><strong>49</strong><sub>.99</sub></p>
+                    <ul class="list-unstyled">
+                        <li>100GB Monthly Bandwidth</li>
+                        <li>$100 Google AdWords</li>
+                        <li>100 Domain Hosting</li>
+                        <li>SSL Shopping Cart</li>
+                        <li>24/7 Live Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#.">Sign Up</a>
+                </div>
+            </div><!-- plan end -->
+            <!-- plan start -->
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="1s">
+                <div class="plan text-center">
+                    <span class="plan-name">Standared <small>Monthly plan</small></span>
+                    <p class="plan-price"><sup class="currency">$</sup><strong>99</strong><sub>.99</sub></p>
+                    <ul class="list-unstyled">
+                        <li>100GB Monthly Bandwidth</li>
+                        <li>$100 Google AdWords</li>
+                        <li>100 Domain Hosting</li>
+                        <li>SSL Shopping Cart</li>
+                        <li>24/7 Live Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#.">Sign Up</a>
+                </div>
+            </div><!-- plan end -->
+            <!-- plan start -->
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="1.4s">
+                <div class="plan text-center featured">
+                    <span class="plan-name">Professional <small>Monthly plan</small></span>
+                    <p class="plan-price"><sup class="currency">$</sup><strong>149</strong><sub>.99</sub></p>
+                    <ul class="list-unstyled">
+                        <li>100GB Monthly Bandwidth</li>
+                        <li>$100 Google AdWords</li>
+                        <li>100 Domain Hosting</li>
+                        <li>SSL Shopping Cart</li>
+                        <li>24/7 Live Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#.">Sign Up</a>
+                </div>
+            </div><!-- plan end -->
+            <!-- plan start -->
+            <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="1.6s">
+                <div class="plan text-center">
+                    <span class="plan-name">Premium <small>Monthly plan</small></span>
+                    <p class="plan-price"><sup class="currency">$</sup><strong>399</strong><sub>.99</sub></p>
+                    <ul class="list-unstyled">
+                        <li>100GB Monthly Bandwidth</li>
+                        <li>$100 Google AdWords</li>
+                        <li>100 Domain Hosting</li>
+                        <li>SSL Shopping Cart</li>
+                        <li>24/7 Live Support</li>
+                    </ul>
+                    <a class="btn btn-primary" href="#.">Sign Up</a>
+                </div>
+            </div><!-- plan end -->
+        </div><!--/ Content row end -->
+    </div><!--/  Container end-->
+</section><!--/ Pricing table end -->
+<!-- Testimonial start-->
+<section class="testimonial parallax parallax2">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div id="testimonial-carousel" class="owl-carousel owl-theme text-center testimonial-slide">
+                @foreach (var item in data.theyTalked)
+                {
+                    <div class="item">
+                        <div class="testimonial-thumb">
+                            <img src="@item.img" alt="testimonial">
+                        </div>
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                @item.text
+                            </p>
+                            <h3 class="name">@item.name<span>@item.title</span></h3>
+                        </div>
+                    </div>
+                }
+            </div><!--/ Testimonial carousel end-->
+        </div><!--/ Row end-->
+    </div><!--/  Container end-->
+</section><!--/ Testimonial end-->
+<!-- Clients start -->
+<section id="clients" class="clients">
+    <div class="container">
+        <div class="row wow fadeInLeft">
+            <div id="client-carousel" class="col-sm-12 owl-carousel owl-theme text-center client-carousel">
+                @foreach (var item in data.clients)
+                {
+                    <figure class="item client_logo">
+                        <a href="#">
+                            <img src="@item.img" alt="client">
+                        </a>
+                    </figure>
+                }
+            </div><!-- Owl carousel end -->
+        </div><!-- Main row end -->
+    </div><!--/ Container end -->
+</section><!--/ Clients end -->
+<!-- Footer start -->

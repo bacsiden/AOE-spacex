@@ -1,0 +1,142 @@
+{
+  "menus": [
+    {
+      "title": "Home",
+      "link": "/",
+      "subs": []
+    },
+    {
+      "title": "About Us",
+      "link": "/home/AboutUs",
+      "subs": []
+    },
+    {
+      "title": "Repair & Overhual",
+      "link": "/home/Repair",
+      "subs": []
+    },
+    {
+      "title": "Special Services",
+      "link": "/home/SpecialServices",
+      "subs": []
+    },
+    {
+      "title": "Quality Assurance",
+      "link": "/home/QualityAssurance",
+      "subs": []
+    },
+    {
+      "title": "Contact Us",
+      "link": "/home/ContactUs",
+      "subs": []
+    }
+  ],
+  "slogan": "NEED TO INVENT THE FUTURE!",
+  "slogan1": "WE MAKING DIFFERENCE TO GREAT THINGS POSSIBLE",
+  "service": {
+    "title": "SERVICE WE PROVIDE",
+    "title1": "A Quality Experience Team With 4 Years Experience",
+    "services": [
+      {
+        "icon": "fa fa-tachometer",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      },
+      {
+        "icon": "fa fa-tachometer",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      },
+      {
+        "icon": "fa fa-tachometer",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      }
+    ]
+  },
+  "chooseUs": {
+    "services": [
+      {
+        "icon": "fa fa-bicycle",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      },
+      {
+        "icon": "fa fa-bicycle",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      },
+      {
+        "icon": "fa fa-bicycle",
+        "title": "WEB DESIGN",
+        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+      }
+    ],
+    "title": "WHY CHOOSE US",
+    "title0": "KNOW MORE ABOUT OUR COMPANY",
+    "title1": "Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor."
+  },
+  "meetTeam": {
+    "title": "MEET WITH OUR TEAM",
+    "title1": "A Quality Experience Team With 4 Years Experience",
+    "persons": [
+      {
+        "img": "images/team/team1.jpg",
+        "name": "VOSGI VARDUHI",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "images/team/team1.jpg",
+        "name": "VOSGI VARDUHI",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "images/team/team1.jpg",
+        "name": "ROBERT ALESKA",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "images/team/team1.jpg",
+        "name": "TALINE VOSKI",
+        "title": "Engineering Structures"
+      }
+    ]
+  },
+  "theyTalked": [
+    {
+      "img": "images/team/testimonial1.jpg",
+      "name": "Narek Bedros",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "title": "Sr. Manager"
+    },
+    {
+      "img": "images/team/testimonial1.jpg",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "name": "Narek Bedros",
+      "title": "Sr. Manager"
+    },
+    {
+      "img": "images/team/testimonial1.jpg",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "name": "Narek Bedros",
+      "title": "Sr. Manager"
+    }
+  ],
+  "clients": [
+    {
+      "img": "images/clients/client1.png"
+    },
+    {
+      "img": "images/clients/client1.png"
+    },
+    {
+      "img": "images/clients/client1.png"
+    },
+    {
+      "img": "images/clients/client1.png"
+    },
+    {
+      "img": "images/clients/client1.png"
+    }
+  ]
+}
