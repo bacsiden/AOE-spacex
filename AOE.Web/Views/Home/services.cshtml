@@ -1,0 +1,37 @@
+﻿@{
+    var data = AOE.Web.Controllers.HomeController.GetServices();
+}
+<div id="banner-area">
+    <img src="/images/banner/banner1.jpg" alt="" />
+    <div class="parallax-overlay"></div>
+    <!-- Subpage title start -->
+    <div class="banner-title-content">
+        <div class="text-center">
+            <h2>@data.title</h2>
+            <ul class="breadcrumb">
+                <li>Home</li>
+                <li><a href="#"> Special Services</a></li>
+            </ul>
+        </div>
+    </div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+<section id="service" class="service">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in data.services)
+            {
+                <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+                    <div class="service-content">
+                        <span class="service-image"><img class="img-responsive" src="@item.img" alt="" /></span>
+                        <h3>@item.title</h3>
+                        @foreach (var text in item.items)
+                        {
+                            <p>- @text</p>
+                        }
+
+                    </div>
+                </div>
+            }
+        </div><!-- Content Row end -->
+    </div><!--/ Container end -->
+</section>

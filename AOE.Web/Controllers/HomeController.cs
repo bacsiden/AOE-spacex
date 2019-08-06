@@ -22,7 +22,6 @@ namespace AOE.Web.Controllers
         {
             return View();
         }
-
         public static dynamic GetAboutUs()
         {
             using (StreamReader r = new StreamReader("about-us.json", encoding: System.Text.Encoding.UTF8))
@@ -31,6 +30,25 @@ namespace AOE.Web.Controllers
                 return JObject.Parse(json);
             }
         }
+
+        public IActionResult Services()
+        {
+            return View();
+        }
+        public static dynamic GetServices()
+        {
+            using (StreamReader r = new StreamReader("services.json", encoding: System.Text.Encoding.UTF8))
+            {
+                var json = r.ReadToEnd();
+                return JObject.Parse(json);
+            }
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
 
         public static dynamic GetContent()
         {
