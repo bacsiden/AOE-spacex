@@ -15,19 +15,29 @@
 
 
   <ItemGroup>
-    <Content Update="services.json">
+    <Content Update="data\about-us.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="about-us.json">
+    <Content Update="data\content-vn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="content.json">
+    <Content Update="data\services-vn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="data\services.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="data\about-us-vn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="data\content.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 
 
   <ItemGroup>
+    <Folder Include="wwwroot\images\product\" />
     <Folder Include="wwwroot\images\services\" />
   </ItemGroup>
 

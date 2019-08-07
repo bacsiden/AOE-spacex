@@ -1,5 +1,5 @@
 ﻿@{
-    var data = AOE.Web.Controllers.HomeController.GetContent();
+    var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
 }
 <section id="service" class="service angle">
     <div class="container">
@@ -26,7 +26,122 @@
         </div><!-- Content row end -->
     </div><!--/ Container end -->
 </section><!--/ Service box end -->
+<section id="portfolio" class="portfolio portfolio-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading text-center">
+                <h2 class="title2">
+                    PRODUCT AND SERVICES
+                    <span class="title-desc">
+                        Định hướng sản phẩm theo nhu cầu khách hàng
+                    </span>
+                </h2>
+            </div>
+        </div> <!-- Title row end -->
+        <!--Isotope filter start -->
+        <div class="row text-center">
+            <div class="isotope-nav" data-isotope-nav="isotope">
+                <ul>
+                    <li><a href="#" data-filter=".cabin">Cabin Interiors</a></li>
+                    <li><a href="#" data-filter=".eq">Ground Support Equipment</a></li>
+                </ul>
+            </div>
+        </div><!-- Isotope filter end -->
 
+        <div class="row">
+            <div id="isotope" class="isotope">
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin1.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin1.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin2.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin2.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin3.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin3.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin4.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin4.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq1.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq1.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq2.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq2.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq3.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq3.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq4.jpg" alt="">
+                            <figcaption>
+                                <h3>Startup Business</h3>
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq4.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div><!-- Isotope content end -->
+        </div><!-- Content row end -->
+    </div><!-- Container end -->
+</section>
 <section id="image-block" class="image-block no-padding">
     <div class="container-fluid">
         <div class="row">

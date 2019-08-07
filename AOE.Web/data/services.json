@@ -1,0 +1,14 @@
+﻿{
+  "title": "Định hướng sản phẩm, dịch vụ",
+  "services": [
+    {
+      "title": "Bếp",
+      "img": "/images/services/bep.jpg",
+      "items": [
+        "Sửa chữa, bảo dưỡng các thiết bị bếp (galley insert)",
+        "Sơn, sửa các loại xe suất ăn, container",
+        "Chế tạo các chi tiết"
+      ]
+    }
+  ]
+}

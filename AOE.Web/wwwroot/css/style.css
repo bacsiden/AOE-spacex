@@ -155,9 +155,10 @@ body, p{
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'JaapokkiRegular';
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
+    font-family: 'Tahoma';
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 h1{
@@ -168,7 +169,7 @@ h1{
 h2{
     font-size: 32px;
     line-height: 40px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 h3{
@@ -669,7 +670,7 @@ blockquote {
 	position: absolute;
 	left: 0;
 	padding: 3px 15px 10px;
-	width: 20%;
+	width: 12%;
 	height: 62px;
 	line-height: 62px;
 

@@ -1,0 +1,33 @@
+{
+  "title": "COMPANY PROFILE",
+  "items": [
+    {
+      "id": "tab_1",
+      "titleLeft": "WHO WE ARE",
+      "title": "WE ARE AWWARED WINNING COMPANY",
+      "icon": "fa fa-info",
+      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+    },
+    {
+      "id": "tab_2",
+      "titleLeft": "WHO WE ARE",
+      "title": "WE ARE AWWARED WINNING COMPANY",
+      "icon": "fa fa-info",
+      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+    },
+    {
+      "id": "tab_3",
+      "titleLeft": "WHO WE ARE",
+      "title": "WE ARE AWWARED WINNING COMPANY",
+      "icon": "fa fa-info",
+      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+    },
+    {
+      "id": "tab_4",
+      "titleLeft": "WHO WE ARE",
+      "title": "WE ARE AWWARED WINNING COMPANY",
+      "icon": "fa fa-info",
+      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+    }
+  ]
+}
