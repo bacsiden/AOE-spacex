@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
 using System;
+using System.Threading.Tasks;
 
 namespace AOE.Application.Base.Cache
 {
@@ -23,6 +24,8 @@ namespace AOE.Application.Base.Cache
         }
 
         public T GetOrCreate<T>(object key, Func<T> action) => _cache.GetOrCreate(key, m => action.Invoke());
+
+        public Task<T> GetOrCreateAsync<T>(object key, Func<Task<T>> action) => _cache.GetOrCreateAsync(key, m => action.Invoke());
 
         public void Remove(object key) => _cache.Remove(key);
     }

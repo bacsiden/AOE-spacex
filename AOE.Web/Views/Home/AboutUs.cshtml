@@ -1,7 +1,7 @@
 ﻿@{
-    var dataUs = AOE.Web.Controllers.HomeController.GetAboutUs();
+    var dataUs = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "about-us");
     var first = true;
-    var data = AOE.Web.Controllers.HomeController.GetContent();
+    var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
 }
 <div id="banner-area">
     <img src="/images/banner/banner1.jpg" alt="" />

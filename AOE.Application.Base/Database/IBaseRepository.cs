@@ -9,8 +9,6 @@ namespace AOE.Application.Base.Database
 {
     public interface IBaseRepository<T> where T : class
     {
-        IMongoCollection<T> _collection { get; }
-
         T Add(T model);
         Task<T> AddAsync(T model);
         void AddRange(IEnumerable<T> list);

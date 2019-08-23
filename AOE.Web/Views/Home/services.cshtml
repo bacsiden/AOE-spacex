@@ -1,5 +1,5 @@
 ﻿@{
-    var data = AOE.Web.Controllers.HomeController.GetServices();
+    var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "services");
 }
 <div id="banner-area">
     <img src="/images/banner/banner1.jpg" alt="" />
