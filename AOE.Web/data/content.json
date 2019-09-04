@@ -11,17 +11,12 @@
       "subs": []
     },
     {
-      "title": "Repair & Overhual",
-      "link": "/home/Repair",
-      "subs": []
-    },
-    {
       "title": "Special Services",
       "link": "/home/Services",
       "subs": []
     },
     {
-      "title": "Quality Assurance",
+      "title": "Air Plane",
       "link": "/home/QualityAssurance",
       "subs": []
     },
@@ -124,19 +119,10 @@
   ],
   "clients": [
     {
-      "img": "/images/clients/client1.png"
+      "img": "/images/clients/cl1.png"
     },
     {
-      "img": "/images/clients/client1.png"
-    },
-    {
-      "img": "/images/clients/client1.png"
-    },
-    {
-      "img": "/images/clients/client1.png"
-    },
-    {
-      "img": "/images/clients/client1.png"
+      "img": "/images/clients/cl2.png"
     }
   ]
 }

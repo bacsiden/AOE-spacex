@@ -55,9 +55,9 @@
                     @foreach (var item in dataUs.items)
                     {
                         <div class="tab-pane @(first?"active": null) animated fadeInRight" id="@item.id">
-                            <i class="fa fa-trophy big"></i>
+                            <i class="fa @item.icon big"></i>
                             <h3>@item.title</h3>
-                            <p>@item.text</p>
+                            <p>@Html.Raw(item.text)</p>
                         </div>
                         first = false;
                     }

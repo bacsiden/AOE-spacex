@@ -1,33 +1,33 @@
-{
+﻿{
   "title": "COMPANY PROFILE",
   "items": [
     {
       "id": "tab_1",
       "titleLeft": "WHO WE ARE",
-      "title": "WE ARE AWWARED WINNING COMPANY",
-      "icon": "fa fa-info",
-      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+      "title": "Công ty cổ phần kỹ thuật hàng không vũ trụ Tuệ Long",
+      "icon": "fa fa-briefcase",
+      "text": "Ngày thành lập: 17/8/2017<br><br>Địa chỉ nhà xưởng: Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội<br><br>Loại hình: Công ty cổ phần<br><br>Giám đốc: Ngô Cao Tùng"
     },
     {
       "id": "tab_2",
-      "titleLeft": "WHO WE ARE",
-      "title": "WE ARE AWWARED WINNING COMPANY",
-      "icon": "fa fa-info",
-      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+      "titleLeft": "Giá trị cốt lõi",
+      "title": "Standard Development, Maintenance Customization",
+      "icon": "fa fa-support",
+      "text": "Hướng tới khách hàng - Năng động – sáng tạo - Hợp tác – chia sẻ - Trung thực – tin cậy - Tuân thủ tuyệt đối."
     },
     {
       "id": "tab_3",
-      "titleLeft": "WHO WE ARE",
-      "title": "WE ARE AWWARED WINNING COMPANY",
-      "icon": "fa fa-info",
-      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+      "titleLeft": "Tầm nhìn",
+      "title": "Tầm nhìn",
+      "icon": "fa fa-eye",
+      "text": "Xây dựng công ty vững mạnh về tổ chức, có cơ chế quản lý điều hành chặt chẽ, năng động, tích cực hội nhập kinh tế trong nước và quốc tế; có công nghệ tiên tiến hiện đại, bảo toàn năng lực sản xuất.<br><br>Đến năm 2020 trở thành nhà cung cấp dịch vụ nội thất được công nhận trong nước.<br><br>Đến năm 2025 trở thành nhà cung cấp dịch vụ nội thất hàng không được công nhận trong khu vực; được EASA/FAA công nhận là tổ chức bảo dưỡng hàng không"
     },
     {
       "id": "tab_4",
-      "titleLeft": "WHO WE ARE",
-      "title": "WE ARE AWWARED WINNING COMPANY",
-      "icon": "fa fa-info",
-      "text": "Over the year we have lots of experience in our field. In sit amet massa sapien. Vestibulum diam turpis, gravida in lobortis id, ornare a eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sagittis nulla non elit dignissim suscipit. Duis lorem nulla, eleifend."
+      "titleLeft": "Sứ mệnh",
+      "title": "Sứ mệnh",
+      "icon": "fa fa-cubes",
+      "text": "Phát triển bền vững, đảm bảo đủ việc làm, thu nhập cho người lao động, từng bước cải thiện và nâng cao. Xây dựng cơ chế phân phối kết quả sản xuất kinh doanh đúng nguyên tắc, chặt chẽ, đảm bảo lợi ích giữa người lao động, doanh nghiệp, nhà nước và xã hội.<br><br>Đa dạng hóa sản phẩm, giữ vững các sản phẩm, bạn hàng hiện có. Nghiên cứu sản phẩm mới, cải tiến, nâng cao chất lượng kiểu dáng công nghiệp; xây dựng nhãn hiệu sản phẩm và thương hiệu doanh nghiệp.<br><br>Chủ động hợp tác kinh tế trong nước và quốc tế; phát triển sản xuất kinh tế phải đảm bảo bền vững, an toàn và hiệu quả."
     }
   ]
 }
