@@ -23,13 +23,12 @@ namespace AOE.Web.Controllers
 
         public IActionResult ChangeLanguage()
         {
-            var lang = string.Empty;
-            Request.Cookies.TryGetValue("lang", out lang);
+            Request.Cookies.TryGetValue("lang", out string lang);
             Response.Cookies.Delete("lang");
-            if (lang == "en")
-                Response.Cookies.Append("lang", "vn");
-            else
+            if (lang == "vn")
                 Response.Cookies.Append("lang", "en");
+            else
+                Response.Cookies.Append("lang", "vn");
             return RedirectToAction(nameof(Index));
         }
 
