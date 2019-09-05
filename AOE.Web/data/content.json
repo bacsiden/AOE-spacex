@@ -1,4 +1,4 @@
-{
+﻿{
   "menus": [
     {
       "title": "Home",
@@ -52,24 +52,34 @@
   "chooseUs": {
     "services": [
       {
-        "icon": "fa fa-bicycle",
-        "title": "WEB DESIGN",
-        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+        "icon": "fa fa-thumbs-up",
+        "title": "Hướng tới khách hàng",
+        "title1": ""
       },
       {
-        "icon": "fa fa-bicycle",
-        "title": "WEB DESIGN",
-        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+        "icon": "fa fa-rocket",
+        "title": "Năng động – sang tạo",
+        "title1": " "
       },
       {
-        "icon": "fa fa-bicycle",
-        "title": "WEB DESIGN",
-        "title1": "High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua polaroid befor"
+        "icon": "fa fa-share-alt",
+        "title": "Hợp tác – chia sẻ",
+        "title1": " "
+      },
+      {
+        "icon": "fa fa-heart",
+        "title": "Trung thực – tin cậy",
+        "title1": ""
+      },
+      {
+        "icon": "fa fa-check",
+        "title": "Tuân thủ tuyệt đối",
+        "title1": ""
       }
     ],
     "title": "WHY CHOOSE US",
     "title0": "KNOW MORE ABOUT OUR COMPANY",
-    "title1": "Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Proin gravida nibh vel velit auctor Aenean sollicitudin, adipisicing elit sed lorem quis bibendum auctor."
+    "title1": "Xây dựng công ty vững mạnh về tổ chức, có cơ chế quản lý điều hành chặt chẽ, năng động, tích cực hội nhập kinh tế trong nước và quốc tế; có công nghệ tiên tiến hiện đại, bảo toàn năng lực sản xuất."
   },
   "meetTeam": {
     "title": "MEET WITH OUR TEAM",
@@ -101,18 +111,18 @@
     {
       "img": "/images/team/testimonial1.jpg",
       "name": "Narek Bedros",
-      "text": "Lorem Ipsum as their default model text, and a search for �lorem ipsum� will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
       "title": "Sr. Manager"
     },
     {
       "img": "/images/team/testimonial1.jpg",
-      "text": "Lorem Ipsum as their default model text, and a search for �lorem ipsum� will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
       "name": "Narek Bedros",
       "title": "Sr. Manager"
     },
     {
       "img": "/images/team/testimonial1.jpg",
-      "text": "Lorem Ipsum as their default model text, and a search for �lorem ipsum� will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
+      "text": "Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose. Lorem Ipsum is that it as opposed to using.",
       "name": "Narek Bedros",
       "title": "Sr. Manager"
     }

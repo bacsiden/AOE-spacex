@@ -38,6 +38,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\certificate\" />
+    <Folder Include="wwwroot\images\csvc\" />
     <Folder Include="wwwroot\images\product\" />
     <Folder Include="wwwroot\images\services\" />
   </ItemGroup>
