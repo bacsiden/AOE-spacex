@@ -17,7 +17,7 @@ namespace AOE.Web.Controllers
 
         public IActionResult Services() => View();
 
-        public IActionResult QualityAssurance() => View();
+        public IActionResult Certifications() => View();
 
         public IActionResult Contact() => View();
 
