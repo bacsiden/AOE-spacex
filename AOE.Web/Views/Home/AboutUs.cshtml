@@ -70,38 +70,5 @@
 
     <div class="gap-60"></div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading">
-                <span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-                <h2 class="title">@data.meetTeam.title <span class="title-desc">@data.meetTeam.title1</span></h2>
-            </div>
-        </div><!-- Title row end -->
-
-        <div class="row text-center">
-            @foreach (var item in data.meetTeam.persons)
-            {
-                <div class="col-md-3 col-sm-6">
-                    <div class="team wow slideInLeft">
-                        <div class="img-hexagon">
-                            <img src="@item.img" alt="">
-                            <span class="img-top"></span>
-                            <span class="img-bottom"></span>
-                        </div>
-                        <div class="team-content">
-                            <h3>@item.name</h3>
-                            <p>@item.title</p>
-                            @*<div class="team-social">
-                                <a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-                                <a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-                                <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-                                <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-                                <a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
-                            </div>*@
-                        </div>
-                    </div>
-                </div>
-            }
-        </div><!--/ Content row end -->
-    </div>
+    
 </section><!--/ Main container end -->

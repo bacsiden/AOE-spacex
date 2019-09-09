@@ -58,7 +58,7 @@
       },
       {
         "icon": "fa fa-rocket",
-        "title": "Năng động – sang tạo",
+        "title": "Năng động – sáng tạo",
         "title1": " "
       },
       {
@@ -133,6 +133,12 @@
     },
     {
       "img": "/images/clients/cl2.png"
+    },
+    {
+      "img": "/images/clients/cl3.png"
+    },
+    {
+      "img": "/images/clients/cl4.png"
     }
   ]
 }

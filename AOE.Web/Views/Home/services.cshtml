@@ -26,7 +26,8 @@
                     <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
                         <div class="service-content">
                             <span class="service-image"><img class="img-responsive" src="@item.img" alt="" /></span>
-                            <h3>@item.title</h3>
+                            <h2>@item.title</h2>
+                            @*<span style="font-size: 1.5em">@(((string)item.title)[0])</span><span>@(((string)item.title).Substring(1, ((string)item.title).Length - 1))</span>*@
                             @foreach (var text in item.items)
                             {
                                 <p style="color: #00609b"><span class="fa fa-check-circle" style="font-size: 0.8em;color: green;"></span> &nbsp; @text</p>
