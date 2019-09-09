@@ -76,29 +76,29 @@
                         <ul class="nav navbar-nav navbar-right">
                             @foreach (dynamic item in data.menus)
                             {
-                                <li class="dropdown">
-                                    <a href="@item.link">@item.title <i class="fa fa-angle-down"></i></a>
-                                    @if (item.subs.Count > 0)
+                            <li class="dropdown">
+                                <a href="@item.link">@item.title <i class="fa fa-angle-down"></i></a>
+                                @if (item.subs.Count > 0)
                                     {
-                                        <div class="dropdown-menu">
-                                            <ul>
-                                                @foreach (dynamic item1 in item.subs)
+                                <div class="dropdown-menu">
+                                    <ul>
+                                        @foreach (dynamic item1 in item.subs)
                                                 {
-                                                    <li><a href="@item1.link">@item1.title</a></li>
+                                        <li><a href="@item1.link">@item1.title</a></li>
                                                 }
-                                            </ul>
-                                        </div>
+                                    </ul>
+                                </div>
                                     }
-                                </li>
+                            </li>
                             }
                             <li>
                                 @if (ViewContext.HttpContext.Request.Cookies["lang"] == "vn")
                                 {
-                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
+                                <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
                                 }
                                 else
                                 {
-                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
+                                <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
                                 }
 
 
@@ -111,24 +111,24 @@
         <!-- Slider start -->
         @if (ViewContext.RouteData.Values["action"].ToString() == "Index")
         {
-            <section id="home" class="no-padding">
-                <div id="main-slide" class="cd-hero">
-                    <ul class="cd-hero-slider">
-                        <li class="selected">
-                            <div class="overlay2">
-                                <img class="" src="/images/slider/bg1.jpg" alt="slider">
-                            </div>
-                            <div class="cd-full-width">
-                                <h2>@data.slogan</h2>
-                                <h3>@data.slogan1</h3>
-                                @*<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
-                                    <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>*@
-                            </div> <!-- .cd-full-width -->
-                        </li>
-                    </ul> <!--/ cd-hero-slider -->
+        <section id="home" class="no-padding">
+            <div id="main-slide" class="cd-hero">
+                <ul class="cd-hero-slider">
+                    <li class="selected">
+                        <div class="overlay2">
+                            <img class="" src="/images/slider/bg1.jpg" alt="slider">
+                        </div>
+                        <div class="cd-full-width">
+                            <h2>@data.slogan</h2>
+                            <h3>@data.slogan1</h3>
+                            @*<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
+                            <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>*@
+                        </div> <!-- .cd-full-width -->
+                    </li>
+                </ul> <!--/ cd-hero-slider -->
 
-                </div><!--/ Main slider end -->
-            </section> <!--/ Slider end -->
+            </div><!--/ Main slider end -->
+        </section>  <!--/ Slider end -->
         }
 
         @RenderBody()
@@ -302,13 +302,39 @@
         <script type="text/javascript" src="/js/wow.min.js"></script>
         <!-- SmoothScroll -->
         @*
-            <script type="text/javascript" src="/js/smoothscroll.js"></script>*@
+        <script type="text/javascript" src="/js/smoothscroll.js"></script>*@
         <!-- Eeasing -->
         <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
         <!-- Counter -->
         <script type="text/javascript" src="/js/jquery.counterup.min.js"></script>
         <!-- Waypoints -->
         <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+        <!-- Google Map API Key Source -->
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCGUIFPMmGs7mrxKFynRphi_m8QsOgHoyA"></script>
+        <!-- Doc https://developers.google.com/maps/documentation/javascript/get-api-key -->
+        <script type="text/javascript" src="/js/gmap3.js"></script>
+
+        <script type="text/javascript">
+
+            $(function () {
+                $('#map')
+                    .gmap3({
+                        address: "14600 Goldenwest St #101A, Westminster, California 92683",
+                        zoom: 17,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        scrollwheel: false
+                    })
+                    .marker(function (map) {
+                        return {
+                            position: map.getCenter(),
+                            icon: 'http://themewinter.com/html/marker.png'
+                        };
+                    });
+            });
+
+        </script>
+
         <!-- Template custom -->
         <script type="text/javascript" src="/js/custom.js"></script>
     </div><!-- Body inner end -->
