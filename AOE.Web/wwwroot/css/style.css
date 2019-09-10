@@ -347,13 +347,14 @@ blockquote {
 	color: #fff;
 }
 
-.parallax-overlay{
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: url(..//images/overaly.png);
+.parallax-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url(..//images/overaly.png);*/
+    background-color: rgba(0,0,0,0.3);
 }
 
 .parallax h3{
@@ -886,13 +887,14 @@ ul.navbar-nav > li > a i{
 /*-- Main slide --*/
 
 .overlay {
-	position: absolute;
-	z-index: 1;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-image: url(..//images/overaly.png);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*background-image: url(..//images/overaly.png);*/
+    background-color: rgba(0,0,0,0.3);
 }
 
 #main-slide .item img{
@@ -1136,7 +1138,8 @@ ul.navbar-nav > li > a i{
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: url(..//images/overaly.png);
+    /*background-image: url(..//images/overaly.png);*/
+    background-color: rgba(0,0,0,0.2);
 }
 
 .ts-flex-slider .flexslider .slides{

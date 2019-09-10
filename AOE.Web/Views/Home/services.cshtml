@@ -2,7 +2,7 @@
     var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "services");
 }
 <div id="banner-area">
-    <img src="/images/banner/banner1.jpg" alt="" style="width: 100%;" />
+    <img src="/images/banner/banner1.jpg" alt="" />
     <div class="parallax-overlay"></div>
     <!-- Subpage title start -->
     <div class="banner-title-content">
@@ -10,7 +10,7 @@
             <h2>@data.title</h2>
             <ul class="breadcrumb">
                 <li>Home</li>
-                <li><a href="#"> Special Services</a></li>
+                <li> Special Services</li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -26,7 +26,7 @@
                     <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
                         <div class="service-content">
                             <span class="service-image"><img class="img-responsive" src="@item.img" alt="" /></span>
-                            <h2>@item.title</h2>
+                            <h2 style="font-size: 26px;">@item.title</h2>
                             @*<span style="font-size: 1.5em">@(((string)item.title)[0])</span><span>@(((string)item.title).Substring(1, ((string)item.title).Length - 1))</span>*@
                             @foreach (var text in item.items)
                             {

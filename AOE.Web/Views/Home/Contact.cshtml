@@ -7,7 +7,7 @@
             <h2>Contact Us</h2>
             <ul class="breadcrumb">
                 <li>Home</li>
-                <li><a href="#"> Contact</a></li>
+                <li> Contact</li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -63,7 +63,6 @@
                     <h3>Công ty cổ phần kỹ thuật hàng không vũ trụ Tuệ Long</h3>
                     <p>TUELONG Aerospace Technology  Engineering Corporation</p>
                     <br>
-                    <p><i class="fa fa-user info"></i>  Giám đốc: Nguyễn Cao Tùng </p>
                     <p><i class="fa fa-home info"></i>  Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội </p>
                     <p><i class="fa fa-phone info"></i>  (+84) 961 303 589 </p>
                     <p><i class="fa fa-envelope-o info"></i>  info@taesco.com</p>
@@ -75,3 +74,29 @@
     </div><!--/ container end -->
 
 </section><!--/ Main container end -->
+
+@section scripts{
+    <!-- Google Map API Key Source -->
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCGUIFPMmGs7mrxKFynRphi_m8QsOgHoyA"></script>
+    <!-- Doc https://developers.google.com/maps/documentation/javascript/get-api-key -->
+    <script type="text/javascript" src="/js/gmap3.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $('#map')
+                .gmap3({
+                    center:[21.187870, 105.847673],
+                    zoom: 17,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                })
+                .marker(function (map) {
+                    return {
+                        position: map.getCenter(),
+                        icon: { url: '/images/marker.png', scaledSize: new google.maps.Size(50, 50) }
+                    };
+                });
+        });
+
+    </script>
+}

@@ -66,39 +66,45 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <div class="navbar-brand navbar-bg">
-                            <a href="index.html">
-                                <img class="img-responsive" src="/images/logo.png" alt="logo">
+                        <div class="navbar-brand navbar-bg" style="background-color: transparent;width: 50%;">
+                            <a href="/" style="font-weight:900; font-size: 1.7em; color: #143B6A;-webkit-text-stroke: 1px #e9ffe4;">
+                                TAESCO
                             </a>
+                            <span style="font-weight:bold; color: #0094ff;">
+                                AEROSPACE
+                            </span>
+                            <span style="font-weight:bold; color: #808080;">
+                                TECHNOLOGY
+                            </span>
                         </div>
                     </div><!--/ Logo end -->
                     <nav class="collapse navbar-collapse clearfix" role="navigation">
                         <ul class="nav navbar-nav navbar-right">
                             @foreach (dynamic item in data.menus)
                             {
-                            <li class="dropdown">
-                                <a href="@item.link">@item.title <i class="fa fa-angle-down"></i></a>
-                                @if (item.subs.Count > 0)
+                                <li class="dropdown">
+                                    <a href="@item.link">@item.title <i class="fa fa-angle-down"></i></a>
+                                    @if (item.subs.Count > 0)
                                     {
-                                <div class="dropdown-menu">
-                                    <ul>
-                                        @foreach (dynamic item1 in item.subs)
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                @foreach (dynamic item1 in item.subs)
                                                 {
-                                        <li><a href="@item1.link">@item1.title</a></li>
+                                                    <li><a href="@item1.link">@item1.title</a></li>
                                                 }
-                                    </ul>
-                                </div>
+                                            </ul>
+                                        </div>
                                     }
-                            </li>
+                                </li>
                             }
                             <li>
                                 @if (ViewContext.HttpContext.Request.Cookies["lang"] == "vn")
                                 {
-                                <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
+                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
                                 }
                                 else
                                 {
-                                <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
+                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
                                 }
 
 
@@ -108,28 +114,6 @@
                 </div><!--/ Row end -->
             </div><!--/ Container end -->
         </header><!--/ Header end -->
-        <!-- Slider start -->
-        @if (ViewContext.RouteData.Values["action"].ToString() == "Index")
-        {
-        <section id="home" class="no-padding">
-            <div id="main-slide" class="cd-hero">
-                <ul class="cd-hero-slider">
-                    <li class="selected">
-                        <div class="overlay2">
-                            <img class="" src="/images/slider/bg1.jpg" alt="slider">
-                        </div>
-                        <div class="cd-full-width">
-                            <h2>@data.slogan</h2>
-                            <h3>@data.slogan1</h3>
-                            @*<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
-                            <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>*@
-                        </div> <!-- .cd-full-width -->
-                    </li>
-                </ul> <!--/ cd-hero-slider -->
-
-            </div><!--/ Main slider end -->
-        </section>  <!--/ Slider end -->
-        }
 
         @RenderBody()
         <footer id="footer" class="footer">
@@ -152,7 +136,7 @@
                                 <h4><a href="#">(Cabin) Maintenance-Customization</a></h4>
                                 <p class="post-meta">
                                     <span class="date"><i class="icon icon-calendar"></i> Năng động – sáng tạo</span>
-                                    <span class="post-meta-comments"><i class="icon icon-bubbles4"></i> <a href="#">03</a></span>
+                                    <span class="post-meta-comments"><i class="icon icon-bubbles4"></i></span>
                                 </p>
                             </div>
                         </div><!-- 2nd Latest Post end -->
@@ -271,7 +255,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <div class="copyright-info">
-                            &copy; Copyright 2019 Tue Long Company. <span>Designed by <a href="https://tuelong.com">TueLong.com</a></span>
+                            &copy; Copyright 2017 Taesco. <span>Designed by <a href="/">taesco.com</a></span>
                         </div>
                     </div>
                 </div><!--/ Row end -->
@@ -310,33 +294,10 @@
         <!-- Waypoints -->
         <script type="text/javascript" src="/js/waypoints.min.js"></script>
 
-        <!-- Google Map API Key Source -->
-        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCGUIFPMmGs7mrxKFynRphi_m8QsOgHoyA"></script>
-        <!-- Doc https://developers.google.com/maps/documentation/javascript/get-api-key -->
-        <script type="text/javascript" src="/js/gmap3.js"></script>
-
-        <script type="text/javascript">
-
-            $(function () {
-                $('#map')
-                    .gmap3({
-                        address: "14600 Goldenwest St #101A, Westminster, California 92683",
-                        zoom: 17,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        scrollwheel: false
-                    })
-                    .marker(function (map) {
-                        return {
-                            position: map.getCenter(),
-                            icon: 'http://themewinter.com/html/marker.png'
-                        };
-                    });
-            });
-
-        </script>
 
         <!-- Template custom -->
         <script type="text/javascript" src="/js/custom.js"></script>
+        @RenderSection("scripts", required: false)
     </div><!-- Body inner end -->
 </body>
 </html>

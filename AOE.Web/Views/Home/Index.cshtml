@@ -1,7 +1,25 @@
 ﻿@{
     var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
 }
-    @*<section id="main-container" class="portfolio-static">
+<section id="home" class="no-padding">
+    <div id="main-slide" class="cd-hero">
+        <ul class="cd-hero-slider">
+            <li class="selected">
+                <div class="overlay2">
+                    <img class="" src="/images/slider/bg1.jpg" alt="slider">
+                </div>
+                <div class="cd-full-width">
+                    <h2>@data.slogan</h2>
+                    <h3>@data.slogan1</h3>
+                    @*<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
+                        <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>*@
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!--/ cd-hero-slider -->
+
+    </div><!--/ Main slider end -->
+</section>
+@*<section id="main-container" class="portfolio-static">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 portfolio-static-item">
@@ -148,7 +166,7 @@
         <!--Isotope filter start -->
         <div class="row text-center">
             <div class="isotope-nav" data-isotope-nav="isotope">
-                <ul>
+                <ul style="font-size: 1.4em;">
                     <li><a href="#" data-filter=".cabin">Cabin Interiors</a></li>
                     <li><a href="#" data-filter=".eq">Ground Support Equipment</a></li>
                 </ul>
@@ -162,7 +180,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/cabin1.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin1.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -173,7 +191,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/cabin2.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin2.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -184,7 +202,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/cabin3.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin3.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -195,7 +213,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/cabin4.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin4.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -206,7 +224,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/eq1.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq1.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -217,7 +235,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/eq2.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq2.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -228,7 +246,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/eq3.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq3.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -239,7 +257,7 @@
                         <figure class="effect-oscar">
                             <img src="/images/product/eq4.jpg" alt="">
                             <figcaption>
-                                
+
                                 <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq4.jpg"><i class="fa fa-search"></i></a>
                             </figcaption>
                         </figure>
@@ -252,11 +270,10 @@
 <section id="image-block" class="image-block no-padding">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 ts-padding" style="height:650px;background:url(/images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
+            <div class="col-md-6 ts-padding" style="height:500px;background:url(/images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
             </div>
-            <div class="col-md-6 ts-padding img-block-right">
+            <div class="col-md-6 ts-padding img-block-right" style="padding-top: 0;">
                 <div class="img-block-head text-center">
-                    <h2>@data.chooseUs.title0</h2>
                     <h3>@data.chooseUs.title</h3>
                     <p>
                         @data.chooseUs.title1
@@ -266,11 +283,11 @@
                 <div class="gap-30"></div>
                 @foreach (var item in data.chooseUs.services)
                 {
-                    <div class="image-block-content">
-                        <span class="feature-icon pull-left"><i class="@item.icon"></i></span>
+                    <div class="image-block-content" style="margin-bottom: 0;">
+                        <span class="feature-icon pull-left" style="width: 45px; height: 45px; line-height: 45px;"><i class="@item.icon"></i></span>
                         <div class="feature-content">
-                            <h3>@item.title</h3>
-                            <p>&nbsp; @item.title1</p>
+                            <h3 style="padding-top: 9px;">@item.title</h3>
+                            <p style="margin:0">&nbsp; @item.title1</p>
                         </div>
                     </div>
                 }
@@ -296,37 +313,36 @@
         </div><!-- Container end -->
     </section><!-- Parallax 1 end -->*@
 <!-- Pricing table start -->
-
 @*<section id="team" class="team">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 heading">
-                <span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-                <h2 class="title">@data.meetTeam.title <span class="title-desc">@data.meetTeam.title1</span></h2>
-            </div>
-        </div><!-- Title row end -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 heading">
+                    <span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
+                    <h2 class="title">@data.meetTeam.title <span class="title-desc">@data.meetTeam.title1</span></h2>
+                </div>
+            </div><!-- Title row end -->
 
-        <div class="row text-center">
-            @foreach (var item in data.meetTeam.persons)
-            {
-                <div class="col-md-3 col-sm-6">
-                    <div class="team wow slideInLeft">
-                        <div class="img-hexagon">
-                            <img src="@item.img" alt="">
-                            <span class="img-top"></span>
-                            <span class="img-bottom"></span>
-                        </div>
-                        <div class="team-content">
-                            <h3>@item.name</h3>
-                            <p>@item.title</p>
-                           
+            <div class="row text-center">
+                @foreach (var item in data.meetTeam.persons)
+                {
+                    <div class="col-md-3 col-sm-6">
+                        <div class="team wow slideInLeft">
+                            <div class="img-hexagon">
+                                <img src="@item.img" alt="">
+                                <span class="img-top"></span>
+                                <span class="img-bottom"></span>
+                            </div>
+                            <div class="team-content">
+                                <h3>@item.name</h3>
+                                <p>@item.title</p>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </div><!--/ Content row end -->
-    </div><!--/ Container end -->
-</section><!--/ Team end -->*@
+                }
+            </div><!--/ Content row end -->
+        </div><!--/ Container end -->
+    </section><!--/ Team end -->*@
 <!-- Testimonial start-->
 <section class="testimonial parallax parallax2">
     <div class="parallax-overlay"></div>
@@ -337,8 +353,8 @@
                 {
                     <div class="item">
                         @*<div class="testimonial-thumb">
-                            <img src="@item.img" alt="testimonial">
-                        </div>*@
+                                <img src="@item.img" alt="testimonial">
+                            </div>*@
                         <div class="testimonial-content">
                             <p class="testimonial-text">
                                 @item.text

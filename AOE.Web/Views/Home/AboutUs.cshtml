@@ -12,7 +12,7 @@
             <h2>About Us</h2>
             <ul class="breadcrumb">
                 <li>Home</li>
-                <li><a href="#"> About Us</a></li>
+                <li> About Us</li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -55,7 +55,7 @@
                     @foreach (var item in dataUs.items)
                     {
                         <div class="tab-pane @(first?"active": null) animated fadeInRight" id="@item.id">
-                            <i class="fa @item.icon big"></i>
+                            <i class="fa @item.icon big" style="font-size: 120px;"></i>
                             <h3>@item.title</h3>
                             <p>@Html.Raw(item.text)</p>
                         </div>
