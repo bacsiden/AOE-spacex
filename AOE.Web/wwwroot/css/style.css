@@ -2561,6 +2561,10 @@ ul.arrow li:before {
 	position: relative;
 }
 
+#banner-area img{
+    width: 100%;
+}
+
 .banner-title-content{
 	position: absolute;
 	top: 50%;
