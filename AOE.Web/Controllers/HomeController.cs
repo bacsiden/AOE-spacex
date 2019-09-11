@@ -4,6 +4,7 @@ using AOE.Web.Models;
 using Newtonsoft.Json.Linq;
 using System.IO;
 using Microsoft.AspNetCore.Http;
+using System.Text.RegularExpressions;
 
 namespace AOE.Web.Controllers
 {

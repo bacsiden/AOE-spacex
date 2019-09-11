@@ -19,79 +19,6 @@
 
     </div><!--/ Main slider end -->
 </section>
-@*<section id="main-container" class="portfolio-static">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/1.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/1.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/2.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/2.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/3.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/3.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/4.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/4.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/5.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/5.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-                <div class="col-sm-3 portfolio-static-item">
-                    <div class="grid">
-                        <figure class="effect-oscar">
-                            <img src="~/images/csvc/6.jpg" alt="">
-                            <figcaption>
-                                <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
-                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/6.jpg"><i class="fa fa-search"></i></a>
-                            </figcaption>
-                        </figure>
-                    </div><!--/ grid end -->
-                </div><!--/ item 1 end -->
-
-            </div><!-- Content row end -->
-        </div><!-- Container end -->
-    </section>*@
 <section id="service" class="service angle">
     <div class="container">
         <div class="row">
@@ -294,56 +221,7 @@
             </div>
         </div>
     </div>
-</section><!--/ Image block end -->
-<!-- Team start -->
-<!-- Parallax 1 start -->
-@*<section class="parallax parallax1">
-        <div class="parallax-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>Are You Ready to Buy This Template!</h2>
-                    <h3>Just Click Button and Use Your Own</h3>
-                    <p>
-                        <a href="#" class="btn btn-primary white">Purchase Now</a>
-                        <a href="#" class="btn btn-primary solid">Get In Touch</a>
-                    </p>
-                </div>
-            </div>
-        </div><!-- Container end -->
-    </section><!-- Parallax 1 end -->*@
-<!-- Pricing table start -->
-@*<section id="team" class="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 heading">
-                    <span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-                    <h2 class="title">@data.meetTeam.title <span class="title-desc">@data.meetTeam.title1</span></h2>
-                </div>
-            </div><!-- Title row end -->
-
-            <div class="row text-center">
-                @foreach (var item in data.meetTeam.persons)
-                {
-                    <div class="col-md-3 col-sm-6">
-                        <div class="team wow slideInLeft">
-                            <div class="img-hexagon">
-                                <img src="@item.img" alt="">
-                                <span class="img-top"></span>
-                                <span class="img-bottom"></span>
-                            </div>
-                            <div class="team-content">
-                                <h3>@item.name</h3>
-                                <p>@item.title</p>
-
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div><!--/ Content row end -->
-        </div><!--/ Container end -->
-    </section><!--/ Team end -->*@
-<!-- Testimonial start-->
+</section>
 <section class="testimonial parallax parallax2">
     <div class="parallax-overlay"></div>
     <div class="container">
@@ -359,7 +237,7 @@
                             <p class="testimonial-text">
                                 @item.text
                             </p>
-                            <h3 class="name">@item.name<span>@item.title</span></h3>
+                            @*<h3 class="name">@item.name<span>@item.title</span></h3>*@
                         </div>
                     </div>
                 }
@@ -368,7 +246,7 @@
     </div><!--/  Container end-->
 </section><!--/ Testimonial end-->
 <!-- Clients start -->
-<section id="clients" class="clients">
+<section id="clients" class="clients" style="padding-top: 30px;padding-bottom: 30px;">
     <div class="container">
         <div class="row wow fadeInLeft">
             <div id="client-carousel" class="col-sm-12 owl-carousel owl-theme text-center client-carousel">
@@ -376,7 +254,7 @@
                 {
                     <figure class="item client_logo">
                         <a href="#">
-                            <img src="@item.img" alt="client" style="height: 40px;">
+                            <img src="@item.img" alt="client" style="height: 30px;">
                         </a>
                     </figure>
                 }

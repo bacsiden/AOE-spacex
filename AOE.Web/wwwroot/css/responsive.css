@@ -61,27 +61,30 @@
 /* Small Devices, Tablets */
 @media (min-width : 768px) and (max-width: 991px) {
 
-	/* Dropdown animation */
-	.navbar-nav .dropdown-menu,
-	.navbar-nav .dropdown.megamenu div.dropdown-menu{
-		background: none;
-		border: 0;
-		box-shadow: none;
-		display: block;
-		opacity: 0;
-		z-index:1;
-		visibility:hidden;
-		-webkit-transform: scale(.8);
-		-moz-transform: scale(.8);
-		-ms-transform: scale(.8);
-		-o-transform: scale(.8);
-		transform: scale(.8);
-		-webkit-transition: visibility 500ms, opacity 500ms, -webkit-transform 500ms cubic-bezier(.43, .26, .11, .99);
-		-moz-transition: visibility 500ms, opacity 500ms, -moz-transform 500ms cubic-bezier(.43, .26, .11, .99);
-		-o-transition: visibility 500ms, opacity 500ms, -o-transform 500ms cubic-bezier(.43, .26, .11, .99);
-		-ms-transition: visibility 500ms, opacity 500ms, -ms-transform 500ms cubic-bezier(.43, .26, .11, .99);
-		transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(.43, .26, .11, .99);
-	}
+    .logo-details{
+        display: none;
+    }
+    /* Dropdown animation */
+    .navbar-nav .dropdown-menu,
+    .navbar-nav .dropdown.megamenu div.dropdown-menu {
+        background: none;
+        border: 0;
+        box-shadow: none;
+        display: block;
+        opacity: 0;
+        z-index: 1;
+        visibility: hidden;
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+        -ms-transform: scale(.8);
+        -o-transform: scale(.8);
+        transform: scale(.8);
+        -webkit-transition: visibility 500ms, opacity 500ms, -webkit-transform 500ms cubic-bezier(.43, .26, .11, .99);
+        -moz-transition: visibility 500ms, opacity 500ms, -moz-transform 500ms cubic-bezier(.43, .26, .11, .99);
+        -o-transition: visibility 500ms, opacity 500ms, -o-transform 500ms cubic-bezier(.43, .26, .11, .99);
+        -ms-transition: visibility 500ms, opacity 500ms, -ms-transform 500ms cubic-bezier(.43, .26, .11, .99);
+        transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(.43, .26, .11, .99);
+    }
 
 	.navbar-nav .dropdown:hover div.dropdown-menu,
 	.navbar-nav .dropdown.megamenu:hover div.dropdown-menu{
@@ -274,7 +277,9 @@
 /* Small Devices Potrait */
 @media (max-width : 767px){
 
-	
+    .logo-details {
+        display: none;
+    }
 	/* Common */
 	.parallax{
 		padding: 60px 0;
