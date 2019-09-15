@@ -15,7 +15,10 @@
 
 
   <ItemGroup>
-    <Content Update="data\about-us.json">
+    <Content Update="data\certifications-vn.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Update="data\about-us-en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="data\content-vn.json">
@@ -24,13 +27,13 @@
     <Content Update="data\services-vn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="data\services.json">
+    <Content Update="data\services-en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Update="data\about-us-vn.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Update="data\content.json">
+    <Content Update="data\content-en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

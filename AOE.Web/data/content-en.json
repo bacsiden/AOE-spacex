@@ -6,7 +6,7 @@
       "subs": []
     },
     {
-      "title": "Giới thiệu",
+      "title": "About Us",
       "link": "/home/AboutUs",
       "subs": [
         {
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "title": "Sản phẩm - Dịch vụ",
+      "title": "Our Services",
       "link": "/home/Services",
       "subs": [
         {
@@ -34,12 +34,12 @@
       ]
     },
     {
-      "title": "Chứng chỉ",
+      "title": "Certifications",
       "link": "/home/Certifications",
       "subs": []
     },
     {
-      "title": "Liên hệ",
+      "title": "Contact Us",
       "link": "/home/Contact",
       "subs": []
     }
@@ -47,10 +47,10 @@
   "slogan": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
   "slogan1": "WE MAKING DIFFERENCE TO GREAT THINGS POSSIBLE",
   "product": {
-    "title": "Sản phẩm - Dịch vụ",
-    "title1": "Định hướng sản phẩm theo nhu cầu của khách hàng",
-    "button1": "Thiết bị nội thất",
-    "button2": "Thiết bị GSE"
+    "title": "Product and Services",
+    "title1": "Product Orientation According To Customer Needs",
+    "button1": "Cabin Interiors",
+    "button2": "Ground Support Equipment"
   },
   "chooseUs": {
     "services": [
@@ -59,12 +59,12 @@
         "groups": [
           {
             "icon": "fa fa-thumbs-up",
-            "title": "Hướng tới khách hàng",
+            "title": "Towards to Customers",
             "title1": ""
           },
           {
             "icon": "fa fa-share-alt",
-            "title": "Hợp tác - Chia sẻ",
+            "title": "Cooperation - Sharing",
             "title1": " "
           }
         ]
@@ -74,7 +74,7 @@
         "groups": [
           {
             "icon": "fa fa-rocket",
-            "title": "Năng động - Sáng tạo",
+            "title": "Dynamic - Creative",
             "title1": " "
           }
         ]
@@ -84,20 +84,20 @@
         "groups": [
           {
             "icon": "fa fa-heart",
-            "title": "Trung thực - Tin cậy",
+            "title": "Honesty - Trust",
             "title1": ""
           },
           {
             "icon": "fa fa-check",
-            "title": "Tuân thủ tuyệt đối",
+            "title": "Absolutely Compliance",
             "title1": ""
           }
         ]
       }
     ],
-    "title": "TẠI SAO LỰA CHỌN CHÙNG TÔI",
+    "title": "WHY CHOOSE US",
     "title0": "KNOW MORE ABOUT OUR COMPANY",
-    "title1": "Xây dựng công ty vững mạnh về tổ chức, có cơ chế quản lý điều hành chặt chẽ, năng động, tích cực hội nhập kinh tế trong nước và quốc tế; có công nghệ tiên tiến hiện đại, bảo toàn năng lực sản xuất."
+    "title1": "Building a strong company in terms of organization and management closely, dynamically and actively integrate domestic and international economy with  advanced modern technology and preserve production capacity."
   },
   "meetTeam": {
     "title": "MEET WITH OUR TEAM",
@@ -148,13 +148,13 @@
     }
   ],
   "footer": {
-    "title1": "Giá trị cốt lõi",
-    "title2": "Hình ảnh sản phẩm",
-    "title3": "Thông tin liên hệ",
-    "companyName": "Công ty cổ phần kỹ thuật công nghệ hàng không vũ trụ Tuệ Long.",
-    "director": "Giám đốc",
-    "directorValue": "Hoàng Đăng Toàn",
-    "address": "Địa chỉ",
+    "title1": "Core Values",
+    "title2": "Product Pictures",
+    "title3": "Contact Information",
+    "companyName": "TUELONG Aerospace Technology Engineering Joint Stock Company",
+    "director": "Director",
+    "directorValue": "Hoang Dang Toan",
+    "address": "Address",
     "addressValue": "Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
   }
 }

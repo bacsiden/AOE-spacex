@@ -4,10 +4,10 @@
     {
       "id": "tab_1",
       "titleLeft": "WHO WE ARE",
-      "title": "Công ty cổ phần Kỹ thuật Công nghệ Hàng không vũ trụ Tuệ Long",
+      "title": "TUELONG Aerospace Technology Engineering Joint Stock Company",
       "icon": "fa fa-briefcase",
       "texts": [],
-      "text": "<br>Ngày thành lập: 17/08/2017<br><br>Địa chỉ: Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
+      "text": "<br>Intro day: 08/17/2017<br><br>Address: Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
     },
     {
       "id": "tab_2",
@@ -15,11 +15,11 @@
       "title": "Standard Development, Maintenance Customization",
       "icon": "fa fa-support",
       "texts": [
-        "Hướng tới khách hàng",
-        "Năng động – Sáng tạo",
-        "Hợp tác – Chia sẻ",
-        "Trung thực – Tin cậy",
-        "Tuân thủ tuyệt đối"
+        "Towards to Customers",
+        "Dynamic – Creative",
+        "Cooperation – Sharing",
+        "Honesty – Trust",
+        "Absolutely compliance"
       ],
       "text" :  null
     },
@@ -29,7 +29,7 @@
       "title": "Tầm nhìn",
       "icon": "fa fa-eye",
       "texts": [
-        "Xây dựng công ty vững mạnh về tổ chức, có cơ chế quản lý điều hành chặt chẽ, năng động, tích cực hội nhập kinh tế trong nước và quốc tế; có công nghệ tiên tiến hiện đại, bảo toàn năng lực sản xuất.",
+        "Building a strong company in terms of organization and management closely, dynamically and actively integrate domestic and international economy with  advanced modern technology and preserve production capacity.",
         "Đến năm 2020 trở thành nhà cung cấp dịch vụ nội thất được công nhận trong nước.",
         "Đến năm 2025 trở thành nhà cung cấp dịch vụ nội thất hàng không được công nhận trong khu vực; được EASA/FAA công nhận là tổ chức bảo dưỡng hàng không."
       ],

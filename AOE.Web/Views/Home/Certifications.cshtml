@@ -1,14 +1,16 @@
-﻿
+﻿@{
+    var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "certifications");
+}
 <div id="banner-area">
     <img src="/images/banner/banner2.jpg" alt="" />
     <div class="parallax-overlay"></div>
     <!-- Subpage title start -->
     <div class="banner-title-content">
         <div class="text-center">
-            <h2>Certifications</h2>
+            <h2>@data.title0</h2>
             <ul class="breadcrumb">
                 <li>Home</li>
-                <li> Certifications</li>
+                <li> @data.title0</li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -42,27 +44,15 @@
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <h3 style="margin-top: 0;">
-                    ĐẢM BẢO CHẤT LƯỢNG
+                    @data.title
                 </h3>
-                <p style="text-align: left; color:lightcoral">Chứng nhận VN-189/CAAV, ISO 9001:2015</p>
-                <p style="text-align: left;">
-                    <span class="fa fa-check-circle" style="font-size: 0.8em;color: green; margin-right: 5px"></span>Công ty cổ phần hàng không vũ trụ Tuệ Long luôn hoạt động bảo dưỡng thiết bị máy bay
-                    nằm trong phạm vi phê chuẩn của Công ty.
-                </p>
-                <p>
-                    <span class="fa fa-check-circle" style="font-size: 0.8em;color: green; margin-right: 5px"></span> Tất cả các hoạt động bảo dưỡng theo yêu cầu của Khách hàng được
-                    thực hiện theo Tài liệu GTTCBD và theo yêu cầu QCATHK
-                </p>
-                <p>
-                    <span class="fa fa-check-circle" style="font-size: 0.8em;color: green; margin-right: 5px"></span>Công tác huấn luyện và đào tạo được thực hiện theo quy định trong tài
-                    liệu Chương trình đào tạo của Công ty.
-                </p>
-                <p>
-                    <span class="fa fa-check-circle" style="font-size: 0.8em;color: green; margin-right: 5px"></span>Đảm bảo đầy đủ cơ sở vật chất, nhà xưởng, thiết bị, phụ tùng vật tư, dữ
-                    liệu bảo dưỡng, nhân viên được huấn luyện và ủy quyền luôn sẵn sàng
-                    trong quá trình bảo dưỡng.
-                </p>
-                </p>
+                <p style="text-align: left; color:lightcoral">@data.title1</p>
+                @foreach (var item in data.texts)
+                {
+                    <p style="text-align: left;">
+                        <span class="fa fa-check-circle" style="font-size: 0.8em;color: green; margin-right: 5px"></span> @item
+                    </p>
+                }
             </div>
         </div>
     </div><!--/  Container end-->

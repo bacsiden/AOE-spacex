@@ -109,7 +109,7 @@ h2.entry-title a:hover{
 }
 
 .header-solid ul.navbar-nav > li:hover > a, .header-solid ul.navbar-nav > li.active > a {
-  color: #143B6A;
+    color: #bb2d30;
 }
 
 /*-- Logo --*/
@@ -120,9 +120,9 @@ h2.entry-title a:hover{
 
 /*-- Main navigation --*/
 
-ul.navbar-nav > li:hover > a, 
-ul.navbar-nav > li.active > a{
-	color: #143B6A;
+ul.navbar-nav > li:hover > a,
+ul.navbar-nav > li.active > a {
+    color: #bb2d30;
 }
 
 .navbar-toggle{
@@ -133,9 +133,9 @@ ul.navbar-nav > li.active > a{
 	color: #143B6A;
 }
 
-.dropdown-menu > ul > li>a:hover, 
-.dropdown-menu > ul > li>a:focus{
-	color: #143B6A;
+.dropdown-menu > ul > li > a:hover,
+.dropdown-menu > ul > li > a:focus {
+    color: #bb2d30;
 }
 
 

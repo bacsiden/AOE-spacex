@@ -48,16 +48,23 @@
                 </ul>
 
                 <div class="tab-content col-md-9 col-sm-7">
-                @{ 
-                    first = true;
-                }
+                    @{
+                        first = true;
+                    }
 
                     @foreach (var item in dataUs.items)
                     {
                         <div class="tab-pane @(first?"active": null) animated fadeInRight" id="@item.id">
                             <i class="fa @item.icon big" style="font-size: 120px;"></i>
                             <h3>@item.title</h3>
-                            <p>@Html.Raw(item.text)</p>
+                            @if (!string.IsNullOrEmpty((string)item.text))
+                            {
+                                <p>@Html.Raw(item.text)</p>
+                            }
+                            @foreach (var text in item.texts)
+                            {
+                                <p><span class='fa fa-check-circle' style='font-size: 0.8em;color: green; margin-right: 5px'></span> @text</p>
+                            }
                         </div>
                         first = false;
                     }
@@ -70,5 +77,5 @@
 
     <div class="gap-60"></div>
 
-    
+
 </section><!--/ Main container end -->

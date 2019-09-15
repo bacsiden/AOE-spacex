@@ -1,5 +1,6 @@
 ﻿@{
     var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
+    var url = ViewContext.RouteData.Values["Action"];
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -71,11 +72,11 @@
                                 TAESCO
                             </a>
                             @*<span style="font-weight:bold; color: #0094ff;" class="logo-details">
-                                AEROSPACE
-                            </span>
-                            <span style="font-weight:bold; color: #808080;"class="logo-details">
-                                TECHNOLOGY
-                            </span>*@
+                                    AEROSPACE
+                                </span>
+                                <span style="font-weight:bold; color: #808080;"class="logo-details">
+                                    TECHNOLOGY
+                                </span>*@
                         </div>
                     </div><!--/ Logo end -->
                     <nav class="collapse navbar-collapse clearfix" role="navigation">
@@ -83,7 +84,12 @@
                             @foreach (dynamic item in data.menus)
                             {
                                 <li class="dropdown">
-                                    <a href="@item.link">@item.title <i class="fa fa-angle-down"></i></a>
+                                    <a href="@item.link">
+                                        @item.title @if (item.subs.Count > 0)
+                                        {
+                                            <i class="fa fa-angle-down"></i>
+                                        }
+                                    </a>
                                     @if (item.subs.Count > 0)
                                     {
                                         <div class="dropdown-menu">
@@ -98,13 +104,13 @@
                                 </li>
                             }
                             <li>
-                                @if (ViewContext.HttpContext.Request.Cookies["lang"] == "vn")
+                                @if (AOE.Web.Controllers.HomeController.lang == "-vn")
                                 {
-                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
+                                    <a href="/home/ChangeLanguage?url=@url"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
                                 }
                                 else
                                 {
-                                    <a href="/home/ChangeLanguage"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
+                                    <a href="/home/ChangeLanguage?url=@url"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
                                 }
 
 
@@ -120,45 +126,24 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-12 footer-widget">
-                        <h3 class="widget-title">Giá trị cốt lõi</h3>
-                        <div class="latest-post-items media">
-                            <div class="latest-post-content media-body">
-                                <h4><a>Standard Development</a></h4>
-                                <p class="post-meta">
-                                    Hướng tới khách hàng
-                                </p>
-                                <p class="post-meta">
-                                    Hợp tác – Chia sẻ
-                                </p>
+                        <h3 class="widget-title">@data.footer.title1</h3>
+                        @foreach (var group in data.chooseUs.services)
+                        {
+                            <div class="latest-post-items media">
+                                <div class="latest-post-content media-body">
+                                    <h4><a>@group.title</a></h4>
+                                    @foreach (var item in group.groups)
+                                    {
+                                        <p class="post-meta">
+                                            @item.title
+                                        </p>
+                                    }
+                                </div>
                             </div>
-                        </div><!-- 1st Latest Post end -->
-
-                        <div class="latest-post-items media">
-                            <div class="latest-post-content media-body">
-                                <h4><a>(Cabin) Maintenance-Customization</a></h4>
-                                <p class="post-meta">
-                                    Năng động – Sáng tạo
-                                </p>
-                            </div>
-                        </div><!-- 2nd Latest Post end -->
-
-                        <div class="latest-post-items media">
-                            <div class="latest-post-content media-body">
-                                <h4><a>After Sales</a></h4>
-                                <p class="post-meta">
-                                    Trung thực – Tin cậy
-                                </p>
-                                <p class="post-meta">
-                                    Tuân thủ tuyệt đối
-                                </p>
-                            </div>
-                        </div><!-- 3rd Latest Post end -->
-
-                    </div><!--/ End Recent Posts-->
-
-
+                        }
+                    </div>
                     <div class="col-md-4 col-sm-12 footer-widget">
-                        <h3 class="widget-title">Hình ảnh sản phẩm</h3>
+                        <h3 class="widget-title">@data.footer.title2</h3>
 
                         <div class="img-gallery">
                             <div class="img-container">
@@ -194,12 +179,12 @@
                     </div><!--/ end flickr -->
 
                     <div class="col-md-4 col-sm-12 footer-widget footer-about-us">
-                        <h3 class="widget-title">Thông tin liên hệ</h3>
-                        <p>Công ty cổ phần kỹ thuật công nghệ hàng không vũ trụ Tuệ Long.</p>
-                        <h4>Giám đốc</h4>
-                        <p>Hoàng Đăng Toàn</p>
-                        <h4>Address</h4>
-                        <p>Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội</p>
+                        <h3 class="widget-title">@data.footer.title3</h3>
+                        <p>@data.footer.companyName</p>
+                        <h4>@data.footer.director</h4>
+                        <p>@data.footer.directorValue</p>
+                        <h4>@data.footer.address</h4>
+                        <p>@data.footer.addressValue</p>
                         <div class="row">
                             <div class="col-md-6">
                                 <h4>Email:</h4>
@@ -286,7 +271,7 @@
         <script type="text/javascript" src="/js/wow.min.js"></script>
         <!-- SmoothScroll -->
         @*
-        <script type="text/javascript" src="/js/smoothscroll.js"></script>*@
+            <script type="text/javascript" src="/js/smoothscroll.js"></script>*@
         <!-- Eeasing -->
         <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
         <!-- Counter -->

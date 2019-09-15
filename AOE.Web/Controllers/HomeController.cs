@@ -22,21 +22,15 @@ namespace AOE.Web.Controllers
 
         public IActionResult Contact() => View();
 
-        public IActionResult ChangeLanguage()
+        public static string lang = "-en";
+        public IActionResult ChangeLanguage(string url)
         {
-            Request.Cookies.TryGetValue("lang", out string lang);
-            Response.Cookies.Delete("lang");
-            if (lang == "vn")
-                Response.Cookies.Append("lang", "en");
-            else
-                Response.Cookies.Append("lang", "vn");
-            return RedirectToAction(nameof(Index));
+            lang = lang == "-vn" ? "-en" : "-vn";
+            return RedirectToAction(url);
         }
 
         public static dynamic GetData(HttpRequest request, string dataName)
         {
-            request.Cookies.TryGetValue("lang", out string lang);
-            lang = lang == "vn" ? "-vn" : null;
             var path = $"data\\{dataName}{lang}.json";
             using (StreamReader r = new StreamReader(path, encoding: System.Text.Encoding.UTF8))
             {

@@ -83,9 +83,9 @@
         <div class="row">
             <div class="col-md-12 heading text-center">
                 <h2 class="title2">
-                    PRODUCT AND SERVICES
+                    @data.product.title
                     <span class="title-desc">
-                        Product orientation according to customer needs
+                        @data.product.title1
                     </span>
                 </h2>
             </div>
@@ -94,8 +94,8 @@
         <div class="row text-center">
             <div class="isotope-nav" data-isotope-nav="isotope">
                 <ul style="font-size: 1.4em;">
-                    <li><a href="#" data-filter=".cabin">Cabin Interiors</a></li>
-                    <li><a href="#" data-filter=".eq">Ground Support Equipment</a></li>
+                    <li><a href="#" data-filter=".cabin">@data.product.button1</a></li>
+                    <li><a href="#" data-filter=".eq">@data.product.button2</a></li>
                 </ul>
             </div>
         </div><!-- Isotope filter end -->
@@ -208,15 +208,18 @@
                 </div>
 
                 <div class="gap-30"></div>
-                @foreach (var item in data.chooseUs.services)
+                @foreach (var group in data.chooseUs.services)
                 {
-                    <div class="image-block-content" style="margin-bottom: 0;">
-                        <span class="feature-icon pull-left" style="width: 45px; height: 45px; line-height: 45px;"><i class="@item.icon"></i></span>
-                        <div class="feature-content">
-                            <h3 style="padding-top: 9px;">@item.title</h3>
-                            <p style="margin:0">&nbsp; @item.title1</p>
+                    foreach (var item in group.groups)
+                    {
+                        <div class="image-block-content" style="margin-bottom: 0;">
+                            <span class="feature-icon pull-left" style="width: 45px; height: 45px; line-height: 45px;"><i class="@item.icon"></i></span>
+                            <div class="feature-content">
+                                <h3 style="padding-top: 9px;">@item.title</h3>
+                                <p style="margin:0">&nbsp; @item.title1</p>
+                            </div>
                         </div>
-                    </div>
+                    }
                 }
             </div>
         </div>
