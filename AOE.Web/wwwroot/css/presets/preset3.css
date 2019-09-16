@@ -122,7 +122,7 @@ h2.entry-title a:hover{
 
 ul.navbar-nav > li:hover > a,
 ul.navbar-nav > li.active > a {
-    color: #bb2d30;
+    color: #fff;
 }
 
 .navbar-toggle{

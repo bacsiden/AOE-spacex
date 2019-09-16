@@ -1,7 +1,7 @@
 ﻿{
   "menus": [
     {
-      "title": "Home",
+      "title": "Trang chủ",
       "link": "/",
       "subs": []
     },
@@ -9,28 +9,12 @@
       "title": "Giới thiệu",
       "link": "/home/AboutUs",
       "subs": [
-        {
-          "title": "Company Profile",
-          "link": "/home/AboutUs"
-        },
-        {
-          "title": "Meet the Team",
-          "link": "/home/AboutUs"
-        }
       ]
     },
     {
       "title": "Sản phẩm - Dịch vụ",
       "link": "/home/Services",
       "subs": [
-        {
-          "title": "Aircraft End-Or-Lease",
-          "link": "/home/Services"
-        },
-        {
-          "title": "Cabin Management",
-          "link": "/home/Services"
-        }
       ]
     },
     {
@@ -70,7 +54,7 @@
         ]
       },
       {
-        "title": "(CABIN) MAINTENANCE-CUSTOMIZATION",
+        "title": "MAINTENANCE-CUSTOMIZATION",
         "groups": [
           {
             "icon": "fa fa-rocket",

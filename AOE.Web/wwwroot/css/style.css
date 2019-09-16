@@ -678,7 +678,7 @@ blockquote {
 }
 
 .navbar-brand img{
-	float: right;
+	float: left;
 	padding: 0 15px;
 
 }
@@ -715,7 +715,7 @@ ul.navbar-nav > li > a {
     font-weight:bold;
     text-transform: uppercase;
     font-size: 14px;
-    color: #fff;
+    color: #e4e4e4;
     padding-top: 22px;
     padding-bottom: 20px;
     line-height: 20px;

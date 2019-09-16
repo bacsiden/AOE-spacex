@@ -1,17 +1,18 @@
 ﻿{
+  "title0" :  "About Us",
   "title": "COMPANY PROFILE",
   "items": [
     {
       "id": "tab_1",
       "titleLeft": "WHO WE ARE",
-      "title": "TUELONG Aerospace Technology Engineering Joint Stock Company",
+      "title": "TUELONG Aerospace Technology Engineering JSC",
       "icon": "fa fa-briefcase",
       "texts": [],
-      "text": "<br>Intro day: 08/17/2017<br><br>Address: Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
+      "text": "<br>Intro day: 08/17/2017<br><br>Address: Nguyen hamlet, Tien Hung village, Nguyen Khe commune, Dong Anh district, Hanoi city, Vietnam"
     },
     {
       "id": "tab_2",
-      "titleLeft": "Giá trị cốt lõi",
+      "titleLeft": "Core Values",
       "title": "Standard Development, Maintenance Customization",
       "icon": "fa fa-support",
       "texts": [
@@ -21,29 +22,29 @@
         "Honesty – Trust",
         "Absolutely compliance"
       ],
-      "text" :  null
+      "text": null
     },
     {
       "id": "tab_3",
-      "titleLeft": "Tầm nhìn",
-      "title": "Tầm nhìn",
+      "titleLeft": "Vision",
+      "title": "Vision",
       "icon": "fa fa-eye",
       "texts": [
         "Building a strong company in terms of organization and management closely, dynamically and actively integrate domestic and international economy with  advanced modern technology and preserve production capacity.",
-        "Đến năm 2020 trở thành nhà cung cấp dịch vụ nội thất được công nhận trong nước.",
-        "Đến năm 2025 trở thành nhà cung cấp dịch vụ nội thất hàng không được công nhận trong khu vực; được EASA/FAA công nhận là tổ chức bảo dưỡng hàng không."
+        "By 2020, become an internationally recognized Cabin interior maintenance service provider.",
+        "By 2025, become ASIA Cabin interior maintenance service provider; accredited by EASA / FAA as Cabin Interior maintenance organization."
       ],
       "text": null
     },
     {
       "id": "tab_4",
-      "titleLeft": "Sứ mệnh",
-      "title": "Sứ mệnh",
+      "titleLeft": "Mission",
+      "title": "Mission",
       "icon": "fa fa-cubes",
       "texts": [
-        "Phát triển bền vững, đảm bảo đủ việc làm, thu nhập cho người lao động, từng bước cải thiện và nâng cao. Xây dựng cơ chế phân phối kết quả sản xuất kinh doanh đúng nguyên tắc, chặt chẽ, đảm bảo lợi ích giữa người lao động, doanh nghiệp, nhà nước và xã hội.",
-        "Đa dạng hóa sản phẩm, giữ vững các sản phẩm, bạn hàng hiện có. Nghiên cứu sản phẩm mới, cải tiến, nâng cao chất lượng kiểu dáng công nghiệp; xây dựng nhãn hiệu sản phẩm và thương hiệu doanh nghiệp.",
-        "Chủ động hợp tác kinh tế trong nước và quốc tế; phát triển sản xuất kinh tế phải đảm bảo bền vững, an toàn và hiệu quả."
+        "Sustainable development, ensuring sufficient jobs and income for employees, gradually improving and improving. Establish a mechanism for distributing business and production results in a strict and strict manner, ensuring benefits among laborers, enterprises, the state and society.",
+        "Diversify products, maintain existing products and partners. Research new products, improve and improve the quality of industrial designs; Branding products and corporate brands.",
+        "Proactive domestic and international economic cooperation; Economic production development must ensure sustainability, safety and efficiency."
       ],
       "text": null
     }

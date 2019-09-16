@@ -9,10 +9,10 @@
     <!-- Subpage title start -->
     <div class="banner-title-content">
         <div class="text-center">
-            <h2>About Us</h2>
+            <h2>@dataUs.title0</h2>
             <ul class="breadcrumb">
-                <li>Home</li>
-                <li> About Us</li>
+                <li>@(AOE.Web.Controllers.HomeController.lang == "-vn" ? "Trang chủ" : "Home") </li>
+                <li> @dataUs.title0 </li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -22,13 +22,12 @@
 <section id="main-container">
     <div class="container">
 
-        <!-- Company Profile -->
-        <div class="row">
+        @*<div class="row">
             <div class="col-md-12 heading">
                 <span class="title-icon classic pull-left"><i class="fa fa-suitcase"></i></span>
                 <h2 class="title classic">@dataUs.title</h2>
             </div>
-        </div><!-- Title row end -->
+        </div>*@
 
         <div class="row">
             <div class="landing-tab clearfix">

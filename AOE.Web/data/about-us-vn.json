@@ -1,9 +1,10 @@
 ﻿{
-  "title": "COMPANY PROFILE",
+  "title0": "Giới thiệu",
+  "title": "Về chúng tôi",
   "items": [
     {
       "id": "tab_1",
-      "titleLeft": "WHO WE ARE",
+      "titleLeft": "Về chúng tôi",
       "title": "Công ty cổ phần Kỹ thuật Công nghệ Hàng không vũ trụ Tuệ Long",
       "icon": "fa fa-briefcase",
       "texts": [],
@@ -21,7 +22,7 @@
         "Trung thực – Tin cậy",
         "Tuân thủ tuyệt đối"
       ],
-      "text" :  null
+      "text": null
     },
     {
       "id": "tab_3",

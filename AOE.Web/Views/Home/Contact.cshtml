@@ -1,13 +1,17 @@
-﻿<div id="banner-area">
+﻿@{
+    var data = AOE.Web.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
+    var title = AOE.Web.Controllers.HomeController.lang == "-vn" ? "Liên hệ" : "Contact";
+}
+<div id="banner-area">
     <img src="/images/banner/banner3.png" alt="" />
     <div class="parallax-overlay"></div>
     <!-- Subpage title start -->
     <div class="banner-title-content">
         <div class="text-center">
-            <h2>Contact Us</h2>
+            <h2>@title</h2>
             <ul class="breadcrumb">
-                <li>Home</li>
-                <li> Contact</li>
+                <li>@(AOE.Web.Controllers.HomeController.lang == "-vn" ? "Trang chủ" : "Home") </li>
+                <li> @title</li>
             </ul>
         </div>
     </div><!-- Subpage title end -->
@@ -61,9 +65,9 @@
             <div class="col-md-5">
                 <div class="contact-info">
                     <h3>Công ty cổ phần Kỹ thuật Công nghệ Hàng không vũ trụ Tuệ Long</h3>
-                    <p>TUELONG Aerospace Technology Engineering Joint Stock Company</p>
+                    <p>TUELONG Aerospace Technology Engineering JSC</p>
                     <br>
-                    <p><i class="fa fa-home info"></i>  Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội </p>
+                    <p><i class="fa fa-home info"></i>  @data.footer.addressValue </p>
                     <p><i class="fa fa-phone info"></i>  (+84) 961 303 589 </p>
                     <p><i class="fa fa-envelope-o info"></i>  info@taesco.com</p>
                     <p><i class="fa fa-globe info"></i>  www.tuelong.com</p>
@@ -86,7 +90,7 @@
         $(function () {
             $('#map')
                 .gmap3({
-                    center:[21.187870, 105.847673],
+                    center: [21.187870, 105.847673],
                     zoom: 17,
                     mapTypeId: google.maps.MapTypeId.ROADMAP
                 })

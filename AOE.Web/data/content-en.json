@@ -9,28 +9,12 @@
       "title": "About Us",
       "link": "/home/AboutUs",
       "subs": [
-        {
-          "title": "Company Profile",
-          "link": "/home/AboutUs"
-        },
-        {
-          "title": "Meet the Team",
-          "link": "/home/AboutUs"
-        }
       ]
     },
     {
       "title": "Our Services",
       "link": "/home/Services",
       "subs": [
-        {
-          "title": "Aircraft End-Or-Lease",
-          "link": "/home/Services"
-        },
-        {
-          "title": "Cabin Management",
-          "link": "/home/Services"
-        }
       ]
     },
     {
@@ -70,7 +54,7 @@
         ]
       },
       {
-        "title": "(CABIN) MAINTENANCE-CUSTOMIZATION",
+        "title": "MAINTENANCE-CUSTOMIZATION",
         "groups": [
           {
             "icon": "fa fa-rocket",
@@ -129,7 +113,7 @@
     {
       "img": "/images/team/testimonial1.jpg",
       "name": "Narek Bedros",
-      "text": "Sự tận tâm của TAESCO làm hài lòng các khách hàng, những khách hàng không hài lòng sẽ là nguồn tư liệu học hỏi tuyệt vời cho công ty.",
+      "text": "TAESCO's dedication to customer satisfaction, unsatisfied customers will be a great learning resource for the company.",
       "title": "Sr. Manager"
     }
   ],
@@ -151,10 +135,10 @@
     "title1": "Core Values",
     "title2": "Product Pictures",
     "title3": "Contact Information",
-    "companyName": "TUELONG Aerospace Technology Engineering Joint Stock Company",
+    "companyName": "TUELONG Aerospace Technology Engineering JSC",
     "director": "Director",
     "directorValue": "Hoang Dang Toan",
     "address": "Address",
-    "addressValue": "Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
+    "addressValue": "Nguyen hamlet, Tien Hung village, Nguyen Khe commune, Dong Anh district, Hanoi city, Vietnam"
   }
 }
