@@ -39,7 +39,7 @@
   "chooseUs": {
     "services": [
       {
-        "title": "STANDARD DEVELOPMENT",
+        "title": "PHÁT TRIỂN SẢN PHẨM TIÊU CHUẨN",
         "groups": [
           {
             "icon": "fa fa-thumbs-up",
@@ -54,7 +54,7 @@
         ]
       },
       {
-        "title": "MAINTENANCE-CUSTOMIZATION",
+        "title": "BẢO DƯỠNG - TÙY CHỈNH THEO YÊU CẦU KHÁCH HÀNG",
         "groups": [
           {
             "icon": "fa fa-rocket",
@@ -64,7 +64,7 @@
         ]
       },
       {
-        "title": "AFTER SALES",
+        "title": "HỖ TRỢ SAU BÁN HÀNG",
         "groups": [
           {
             "icon": "fa fa-heart",

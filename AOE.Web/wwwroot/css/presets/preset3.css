@@ -109,7 +109,7 @@ h2.entry-title a:hover{
 }
 
 .header-solid ul.navbar-nav > li:hover > a, .header-solid ul.navbar-nav > li.active > a {
-    color: #bb2d30;
+    color: #fff;
 }
 
 /*-- Logo --*/

@@ -276,14 +276,22 @@
 
 /* Small Devices Potrait */
 @media (max-width : 767px){
-
+    #banner-area img {
+        height: 120px;
+    }
+    #banner-area .breadcrumb {
+        display: none;
+    }
     .logo-details {
         display: none;
     }
-	/* Common */
-	.parallax{
-		padding: 60px 0;
-	}
+    section{
+        padding: 10px;
+    }
+    /* Common */
+    .parallax {
+        padding: 60px 0;
+    }
 	.style-switch-button{
 		display: none;
 	}
