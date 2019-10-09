@@ -5,11 +5,19 @@ using Newtonsoft.Json.Linq;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using System.Threading.Tasks;
 
 namespace AOE.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IEmailSender _emailSender;
+        public HomeController(IEmailSender emailSender)
+        {
+            _emailSender = emailSender;
+        }
+
         public IActionResult Index() => View();
 
         public IActionResult AboutUs() => View();
@@ -21,6 +29,13 @@ namespace AOE.Web.Controllers
         public IActionResult Certifications() => View();
 
         public IActionResult Contact() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> Contact(string name, string email, string subject, string message)
+        {
+            await _emailSender.SendEmailAsync("info@taesco.com", $"[{email} - {name}] {subject}", message);
+            return Redirect("/Home/Contact?thanks=1");
+        }
 
         public static string lang = "-en";
         public IActionResult ChangeLanguage(string url)

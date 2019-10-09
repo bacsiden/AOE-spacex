@@ -21,6 +21,12 @@
 <section id="main-container">
     <div class="container">
         <div class="row">
+            @if (Context.Request.Query.TryGetValue("thanks", out _))
+            {
+                <div class="alert alert-success" role="alert">
+                    @data.contact.thanks
+                </div>
+            }
             <!-- Map start here -->
             <div id="map-wrapper" class="no-padding">
                 <div class="map" id="map"></div>
@@ -29,7 +35,7 @@
         </div><!-- Content row  end -->
         <div class="row">
             <div class="col-md-7">
-                <form id="contact-form" action="/home/contact" method="get" role="form">
+                <form id="contact-form" action="/home/Contact" method="post" role="form">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">

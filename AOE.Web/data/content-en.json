@@ -140,5 +140,8 @@
     "directorValue": "Hoang Dang Toan",
     "address": "Address",
     "addressValue": "Nguyen hamlet, Tien Hung village, Nguyen Khe commune, Dong Anh district, Hanoi city, Vietnam"
+  },
+  "contact": {
+    "thanks": "Thanks for your attention, we will contact you shortly!"
   }
 }
