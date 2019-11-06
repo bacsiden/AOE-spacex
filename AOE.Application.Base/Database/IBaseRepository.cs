@@ -21,6 +21,7 @@ namespace AOE.Application.Base.Database
         IMongoQueryable<T> Find(Expression<Func<T, bool>> predicate);
         IFindFluent<T, T> Find(IEnumerable<object> ids);
         IList<T> Find(object[] pars, int skip = 0, int take = -1);
+        Task<List<T>> FindAsync(object[] pars, int skip = 0, int take = -1);
         T Get(object id);
         Task<T> GetAsync(Expression<Func<T, bool>> predicate);
         Task<T> GetAsync(object id);

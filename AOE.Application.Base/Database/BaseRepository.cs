@@ -34,19 +34,20 @@ namespace AOE.Application.Base.Database
         public virtual IMongoQueryable<T> Find(Expression<Func<T, bool>> predicate) => _collection.AsQueryable().Where(predicate);
 
         public virtual IFindFluent<T, T> Find(IEnumerable<object> ids) => _collection.Find(Builders<T>.Filter.In("_id", ConvertIds(ids)));
-
-        public virtual IList<T> Find(object[] pars, int skip = 0, int take = -1)
+        private IFindFluent<T, T> FindFluent(object[] pars, int skip = 0, int take = -1)
         {
-            if (pars == null) return take == -1 ? _collection.AsQueryable().Skip(skip).ToList() : _collection.AsQueryable().Skip(skip).Take(take).ToList();
+            if (pars == null) return take == -1 ? _collection.Find(Builders<T>.Filter.Empty).Skip(skip) : _collection.Find(Builders<T>.Filter.Empty).Skip(skip).Limit(take);
             if (pars.Length / 2 != 0) throw new ArgumentException($"{nameof(pars)} is not valid, its length must be even");
 
             var filter = Builders<T>.Filter.Empty;
-            for (int i = 0; i < pars.Length; i+= 2)
+            for (int i = 0; i < pars.Length; i += 2)
             {
                 filter &= Builders<T>.Filter.Eq(pars[i].ToString(), pars[i + 1]);
             }
-            return take == -1 ? _collection.Find(filter).Skip(skip).ToList() : _collection.Find(filter).Skip(skip).Limit(take).ToList();
+            return take == -1 ? _collection.Find(filter).Skip(skip) : _collection.Find(filter).Skip(skip).Limit(take);
         }
+        public virtual IList<T> Find(object[] pars, int skip = 0, int take = -1) => FindFluent(pars, skip, take).ToList();
+        public virtual Task<List<T>> FindAsync(object[] pars, int skip = 0, int take = -1) => FindFluent(pars, skip, take).ToListAsync();
 
         public virtual T Add(T model)
         {

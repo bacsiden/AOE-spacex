@@ -15,6 +15,21 @@ namespace AOE.Application.Services
             _cache = cache;
         }
 
+        public Task AddRoleToUserAsync(string userId, string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task<ApplicationUser> GetAsync(string id) => _cache.GetOrCreateAsync<ApplicationUser>($"users:{id}", () => _userRepository.GetAsync(id));
+
+        public Task RemoveRoleInUserAsync(string userId, string role)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Task<ApplicationUser> UpdateAsync(ApplicationUser model)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
