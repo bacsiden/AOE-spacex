@@ -22,29 +22,19 @@ namespace AOE.App.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> GroupEdit(Role model)
+        public IActionResult GroupEdit(Role model)
         {
-            model = await _fWService.UpsertRoleAsync(model);
+            _roleRepository.Save(model.Id, m => m.Set(x => x.Title, model.Title));
             return View(model);
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> DeleteGroup(Guid groupId)
         {
-            await _fWService.DeleteRoleAsync(groupId);
+            await _roleRepository.DeleteAsync(groupId);
             return RedirectToAction(nameof(Groups));
         }
 
         public async Task<IActionResult> RoleGroup(Guid groupId) => View(await _fWService.GetActionsAsync(groupId, Actions.GetValues));
-            //var group = await _groupRepository.GetAsync(groupId);
-            //var model = Role.GetValues();
-            //foreach (var roles in model.Values)
-            //{
-            //    for (int i = 0; i < roles.Count; i++)
-            //    {
-            //        if (group.Roles.Contains(roles[i].Key)) roles[i] = new KeyValuePair<string, bool>(roles[i].Key, true);
-            //    }
-            //}
-
     }
 }

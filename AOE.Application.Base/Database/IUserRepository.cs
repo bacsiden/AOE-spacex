@@ -1,7 +1,7 @@
 ﻿using AOE.Application.Base.Database;
-using AOE.Application.Models.Framework;
+using AOE.Application.Base.Models;
 
-namespace AOE.Application.Repositories
+namespace AOE.Application.Base.Database
 {
     public interface IUserRepository : IBaseRepository<ApplicationUser>
     {

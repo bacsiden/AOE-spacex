@@ -10,12 +10,12 @@ namespace AOE.Application.Base.Database
     {
         public RoleRepository(IMongoDatabase db) : base(db, "roles") { }
 
-        public Task AddActionAsync(Guid groupId, string action) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == groupId), Builders<Role>.Update.Push(x => x.Actions, action));
+        public Task AddActionAsync(Guid roleId, string action) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == roleId), Builders<Role>.Update.Push(x => x.Actions, action));
 
-        public Task AddUserAsync(Guid groupId, UserMeta user) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == groupId), Builders<Role>.Update.Push(x => x.Users, user));
+        public Task AddUserAsync(Guid roleId, UserMeta user) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == roleId), Builders<Role>.Update.Push(x => x.Users, user));
 
-        public Task RemoveActionAsync(Guid groupId, string action) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == groupId), Builders<Role>.Update.Pull(x => x.Actions, action));
+        public Task RemoveActionAsync(Guid roleId, string action) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == roleId), Builders<Role>.Update.Pull(x => x.Actions, action));
 
-        public Task RemoveUserAsync(Guid groupId, string userId) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == groupId), Builders<Role>.Update.Pull(x => x.Users.Select(m => m.Id), userId));
+        public Task RemoveUserAsync(Guid roleId, string userId) => _collection.UpdateOneAsync(Builders<Role>.Filter.Where(x => x.Id == roleId), Builders<Role>.Update.Pull(x => x.Users.Select(m => m.Id), userId));
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using AOE.Application.Base.Cache;
 using AOE.Application.Base.Database;
@@ -15,16 +14,19 @@ namespace AOE.Application.Base.Services
         private readonly ILeftMenuRepository _leftMenuRepository;
         private readonly ICacheManager _cacheManager;
         private readonly IUserFinder _userFinder;
+        private readonly IUserRepository _userRepository;
 
         public FWService(IRoleRepository roleRepository,
             ILeftMenuRepository leftMenuRepository,
             ICacheManager cacheManager,
-            IUserFinder userFinder)
+            IUserFinder userFinder,
+            IUserRepository userRepository)
         {
             _roleRepository = roleRepository;
             _leftMenuRepository = leftMenuRepository;
             _cacheManager = cacheManager;
             _userFinder = userFinder;
+            _userRepository = userRepository;
         }
 
         public async Task AddActionAsync(Guid roleId, string action)
@@ -37,9 +39,16 @@ namespace AOE.Application.Base.Services
             });
         }
 
-        public Task AddUserToRoleAsync(Guid roleId, string userId)
+        public async Task AddUserToRoleAsync(Guid roleId, string userId)
         {
-            throw new NotImplementedException();
+            var user = await _userRepository.GetAsync(userId);
+            await _roleRepository.AddUserAsync(roleId, new UserMeta
+            {
+                Id = user.Id,
+                Avatar = user.Avatar,
+                Email = user.Email,
+                Name = user.Name
+            });
         }
 
         public async Task<bool> CurrentUserHasActionAsync(string action)
@@ -47,11 +56,6 @@ namespace AOE.Application.Base.Services
             var userId = _userFinder.GetCurrentUserId();
             var actions = await _cacheManager.GetOrCreateAsync(Constant.Cache.UserActions + userId, () => GetUserActionsAsync(userId), TimeSpan.FromSeconds(20));
             return actions.Contains(action);
-        }
-
-        public Task<Role> DeleteRoleAsync(Guid id)
-        {
-            throw new NotImplementedException();
         }
 
         public async Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions)
@@ -83,21 +87,6 @@ namespace AOE.Application.Base.Services
                 result = result.Where(m => m.Children.Any()).ToList();
                 return result;
             }, TimeSpan.FromSeconds(20));
-        }
-
-        public Task RemoveActionAsync(Guid roleId, string action)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task RemoveUserInRoleAsync(Guid roleId, string userId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Role> UpsertRoleAsync(Role model)
-        {
-            throw new NotImplementedException();
         }
 
         private async Task<List<string>> GetUserActionsAsync(string userId)

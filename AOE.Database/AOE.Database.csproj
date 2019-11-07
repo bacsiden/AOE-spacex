@@ -14,4 +14,8 @@
     <ProjectReference Include="..\AOE.Application\AOE.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+
 </Project>

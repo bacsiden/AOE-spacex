@@ -1,9 +1,8 @@
 ﻿using AOE.Application.Base.Database;
-using AOE.Application.Models.Framework;
-using AOE.Application.Repositories;
+using AOE.Application.Base.Models;
 using MongoDB.Driver;
 
-namespace AOE.Database.Repositories
+namespace AOE.Application.Base.Database
 {
     public class UserRepository : BaseRepository<ApplicationUser>, IUserRepository
     {

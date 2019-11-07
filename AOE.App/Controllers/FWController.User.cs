@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AOE.Application.Base.Models;
 using Microsoft.AspNetCore.Mvc;
-using AOE.Application.Models.Framework;
 using AOE.Application.Base;
 
 namespace AOE.App.Controllers
@@ -25,7 +24,7 @@ namespace AOE.App.Controllers
         [HttpPost]
         public async Task<IActionResult> UserEdit(ApplicationUser model, string returnUrl)
         {
-            await _userService.UpdateAsync(model);
+            await _userRepository.UpdateAsync(model);
             return GoBack(returnUrl, nameof(Users));
         }
     }

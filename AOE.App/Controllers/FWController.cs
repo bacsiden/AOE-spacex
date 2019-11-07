@@ -2,8 +2,6 @@
 using AOE.Application.Base.Services;
 using AOE.Application.Base.Database;
 using Microsoft.AspNetCore.Mvc;
-using AOE.Application.Repositories;
-using AOE.Application.Services;
 
 namespace AOE.App.Controllers
 {
@@ -12,17 +10,14 @@ namespace AOE.App.Controllers
         private readonly IFWService _fWService;
         private readonly IRoleRepository _roleRepository;
         private readonly IUserRepository _userRepository;
-        private readonly IUserService _userService;
 
         public FWController(IFWService fWService,
             IRoleRepository groupRepository,
-            IUserRepository userRepository,
-            IUserService userService)
+            IUserRepository userRepository)
         {
             _fWService = fWService;
             _roleRepository = groupRepository;
             _userRepository = userRepository;
-            _userService = userService;
         }
 
         [ResponseCache(Duration = 120)]
@@ -31,6 +26,5 @@ namespace AOE.App.Controllers
             var menus = await _fWService.GetLeftMenuForCurrentUserAsync();
             return View(menus);
         }
-
     }
 }

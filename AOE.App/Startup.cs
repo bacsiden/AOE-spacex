@@ -10,9 +10,6 @@ using AOE.Application.Base.Database;
 using AOE.Application.Base.Models;
 using AOE.Application.Base.Services;
 using AOE.Application.Models.Framework;
-using AOE.Application.Repositories;
-using AOE.Application.Services;
-using AOE.Database.Repositories;
 using AspNetCore.Identity.Mongo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -83,7 +80,6 @@ namespace AOE.App
             services.AddScoped<AccountController>();
             services.AddTransient<ICacheManager, MemoryCacheManager>();
             services.AddTransient<IEmailSender, EmailSender>();
-            services.AddTransient<IUserService, UserService>();
             services.AddTransient<IFWService, FWService>();
             services.AddTransient<IUserFinder, UserFinder>();
 
