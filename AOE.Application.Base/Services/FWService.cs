@@ -33,13 +33,20 @@ namespace AOE.Application.Base.Services
             var role = await _roleRepository.GetAsync(roleId);
             role.Users.ForEach(m =>
             {
-                _cacheManager.Remove($"{Constant.Cache.UserActions}-{m.Id}");
+                _cacheManager.Remove($"{Constant.Cache.UserActions}{m.Id}");
             });
         }
 
         public Task AddUserToRoleAsync(Guid roleId, string userId)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> CurrentUserHasActionAsync(string action)
+        {
+            var userId = _userFinder.GetCurrentUserId();
+            var actions = await _cacheManager.GetOrCreateAsync(Constant.Cache.UserActions + userId, () => GetUserActionsAsync(userId), TimeSpan.FromSeconds(20));
+            return actions.Contains(action);
         }
 
         public Task<Role> DeleteRoleAsync(Guid id)
@@ -61,12 +68,21 @@ namespace AOE.Application.Base.Services
             return actions;
         }
 
-        public async Task<List<LeftMenu>> GetCurrentLeftMenuAsync()
+        public Task<List<LeftMenu>> GetLeftMenuForCurrentUserAsync()
         {
             var userId = _userFinder.GetCurrentUserId();
-            var actions = await GetUserActionsAsync(userId);
-            var menus = await _leftMenuRepository.FindAsync(null);
-            return menus.Where(m => m.Actions.Intersect(actions).Any()).ToList();
+            return _cacheManager.GetOrCreateAsync($"{Constant.Cache.UserMenus}-{userId}", async () =>
+            {
+                var actions = await GetUserActionsAsync(userId);
+                var menus = await _leftMenuRepository.FindAsync(null);
+                var result = menus.Where(m => m.Actions.Any(x => actions.Contains(x)) || m.Children.Any(x => x.Actions.Any(a => actions.Contains(a)))).ToList();
+                foreach (var item in result)
+                {
+                    item.Children = item.Children.Where(m => m.Actions.Any(x => actions.Contains(x))).ToList();
+                }
+                result = result.Where(m => m.Children.Any()).ToList();
+                return result;
+            }, TimeSpan.FromSeconds(20));
         }
 
         public Task RemoveActionAsync(Guid roleId, string action)
@@ -84,7 +100,7 @@ namespace AOE.Application.Base.Services
             throw new NotImplementedException();
         }
 
-        public async Task<List<string>> GetUserActionsAsync(string userId)
+        private async Task<List<string>> GetUserActionsAsync(string userId)
         {
             var roles = await _roleRepository.FindAsync(new string[] { $"{nameof(Role.Users)}._id", userId });
             return roles.SelectMany(m => m.Actions).ToList();

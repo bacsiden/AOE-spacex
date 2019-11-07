@@ -25,9 +25,10 @@ namespace AOE.App.Controllers
             _userService = userService;
         }
 
+        [ResponseCache(Duration = 120)]
         public async Task<IActionResult> LeftMenu()
         {
-            var menus = await _fWService.GetCurrentLeftMenuAsync();
+            var menus = await _fWService.GetLeftMenuForCurrentUserAsync();
             return View(menus);
         }
 

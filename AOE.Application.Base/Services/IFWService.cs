@@ -8,7 +8,7 @@ namespace AOE.Application.Base.Services
 {
     public interface IFWService
     {
-        Task<List<LeftMenu>> GetCurrentLeftMenuAsync();
+        Task<List<LeftMenu>> GetLeftMenuForCurrentUserAsync();
 
         Task<Role> UpsertRoleAsync(Role model);
         Task<Role> DeleteRoleAsync(Guid id);
@@ -18,5 +18,7 @@ namespace AOE.Application.Base.Services
         Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions);
         Task AddActionAsync(Guid roleId, string action);
         Task RemoveActionAsync(Guid roleId, string action);
+
+        Task<bool> CurrentUserHasActionAsync(string action);
     }
 }

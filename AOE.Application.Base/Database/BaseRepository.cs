@@ -37,7 +37,7 @@ namespace AOE.Application.Base.Database
         private IFindFluent<T, T> FindFluent(object[] pars, int skip = 0, int take = -1)
         {
             if (pars == null) return take == -1 ? _collection.Find(Builders<T>.Filter.Empty).Skip(skip) : _collection.Find(Builders<T>.Filter.Empty).Skip(skip).Limit(take);
-            if (pars.Length / 2 != 0) throw new ArgumentException($"{nameof(pars)} is not valid, its length must be even");
+            if (pars.Length % 2 != 0) throw new ArgumentException($"{nameof(pars)} is not valid, its length must be even");
 
             var filter = Builders<T>.Filter.Empty;
             for (int i = 0; i < pars.Length; i += 2)
