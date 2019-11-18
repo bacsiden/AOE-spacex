@@ -12,7 +12,7 @@ namespace AOE.Application.Base.Services
 
         Task AddUserToRoleAsync(Guid roleId, string userId);
 
-        Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions);
+        Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetRoleActionsTableAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions);
 
         Task<bool> CurrentUserHasActionAsync(string action);
     }

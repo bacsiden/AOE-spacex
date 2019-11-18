@@ -12,6 +12,13 @@ using AOE.App.Security;
 
 namespace AOE.App.Controllers
 {
+    public class xxEx : Exception
+    {
+        public xxEx() : base("", new NullReferenceException())
+        {
+        }
+    }
+
     [Authorize]
     public class HomeController : Controller
     {

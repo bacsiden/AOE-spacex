@@ -16,6 +16,8 @@ namespace AOE.Application.Base.Services
         private readonly IUserFinder _userFinder;
         private readonly IUserRepository _userRepository;
 
+        private readonly TimeSpan RoleCacheDuration = TimeSpan.FromSeconds(10);
+
         public FWService(IRoleRepository roleRepository,
             ILeftMenuRepository leftMenuRepository,
             ICacheManager cacheManager,
@@ -54,11 +56,11 @@ namespace AOE.Application.Base.Services
         public async Task<bool> CurrentUserHasActionAsync(string action)
         {
             var userId = _userFinder.GetCurrentUserId();
-            var actions = await _cacheManager.GetOrCreateAsync(Constant.Cache.UserActions + userId, () => GetUserActionsAsync(userId), TimeSpan.FromSeconds(20));
+            var actions = await _cacheManager.GetOrCreateAsync(Constant.Cache.UserActions + userId, () => GetUserActionsAsync(userId), RoleCacheDuration);
             return actions.Contains(action);
         }
 
-        public async Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions)
+        public async Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetRoleActionsTableAsync(Guid roleId, Func<Dictionary<string, List<KeyValuePair<string, bool>>>> getAcctions)
         {
             var role = await _roleRepository.GetAsync(roleId);
             var actions = getAcctions();
@@ -75,7 +77,7 @@ namespace AOE.Application.Base.Services
         public Task<List<LeftMenu>> GetLeftMenuForCurrentUserAsync()
         {
             var userId = _userFinder.GetCurrentUserId();
-            return _cacheManager.GetOrCreateAsync($"{Constant.Cache.UserMenus}-{userId}", async () =>
+            return _cacheManager.GetOrCreateAsync($"{Constant.Cache.UserMenus}{userId}", async () =>
             {
                 var actions = await GetUserActionsAsync(userId);
                 var menus = await _leftMenuRepository.FindAsync(null);
@@ -84,9 +86,9 @@ namespace AOE.Application.Base.Services
                 {
                     item.Children = item.Children.Where(m => m.Actions.Any(x => actions.Contains(x))).ToList();
                 }
-                result = result.Where(m => m.Children.Any()).ToList();
+                result = result.Where(m => m.Children.Any() || !string.IsNullOrWhiteSpace(m.Link)).ToList();
                 return result;
-            }, TimeSpan.FromSeconds(20));
+            }, RoleCacheDuration);
         }
 
         private async Task<List<string>> GetUserActionsAsync(string userId)

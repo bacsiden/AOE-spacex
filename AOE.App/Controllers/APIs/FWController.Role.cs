@@ -41,6 +41,6 @@ namespace AOE.App.Controllers.APIs
 
         [HttpGet]
         [Route("roles/{roleId}/actions")]
-        public Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsTable(Guid roleId) => _fWService.GetActionsAsync(roleId, Actions.GetValues);
+        public Task<Dictionary<string, List<KeyValuePair<string, bool>>>> GetActionsTable(Guid roleId) => _fWService.GetRoleActionsTableAsync(roleId, Actions.GetValues);
     }
 }

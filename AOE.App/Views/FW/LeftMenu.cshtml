@@ -16,19 +16,19 @@
                 {
                     if (item.Children.Any())
                     {
-                        <li class="menu-item-has-children @(url.Contains(item.Link?.ToLower()) ? "active" : null) dropdown">
+                        <li class="menu-item-has-children dropdown">
                             <a href="@item.Link" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon @item.Icon"></i>@item.Title</a>
                             <ul class="sub-menu children dropdown-menu">
                                 @foreach (var subItem in item.Children)
                                 {
-                                    <li><i class="@subItem.Icon"></i><a href="@subItem.Link">@subItem.Title</a></li>
+                                    <li class=""><i class="@subItem.Icon"></i><a href="@subItem.Link">@subItem.Title</a></li>
                                 }
                             </ul>
                         </li>
                     }
                     else
                     {
-                        <li><i class="@item.Icon"></i><a href="@item.Link">@item.Title</a></li>
+                        <li><a href="@item.Link"><i class="menu-icon @item.Icon"></i> @item.Title</a></li>
                     }
                 }
             </ul>
