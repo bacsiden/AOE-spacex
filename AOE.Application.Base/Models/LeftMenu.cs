@@ -9,7 +9,7 @@ namespace AOE.Application.Base.Models
     {
         [BsonId]
         public ObjectId Id { get; set; }
-        public string Title { get; set; }
+        public string Title { get; private set; }
         public int Order { get; set; }
         public string Icon { get; set; }
         public string Link { get; set; }

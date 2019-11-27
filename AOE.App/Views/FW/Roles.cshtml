@@ -1,0 +1,23 @@
+﻿@model List<AOE.Application.Base.Models.Role>
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title mb-2">Danh sách quyền</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <a asp-action="RoleEdit" asp-controller="FW" asp-route-id="@item.Id">@item.Title</a>
+                                    <small class="text-muted">@item.Users.Count users, @item.Actions.Count actions</small>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
