@@ -1,91 +1,76 @@
 ﻿{
   "menus": [
     {
-      "title": "Trang chủ",
-      "link": "/",
+      "title": "Home",
+      "link": "#intro",
       "subs": []
     },
     {
       "title": "Giới thiệu",
-      "link": "/home/AboutUs",
+      "link": "#about",
       "subs": [
       ]
     },
     {
-      "title": "Sản phẩm - Dịch vụ",
-      "link": "/home/Services",
+      "title": "Dịch vụ",
+      "link": "#services",
       "subs": [
       ]
     },
     {
-      "title": "Chứng chỉ",
-      "link": "/home/Certifications",
+      "title": "Đội ngũ",
+      "link": "#team",
       "subs": []
     },
     {
       "title": "Liên hệ",
-      "link": "/home/Contact",
+      "link": "#contact",
       "subs": []
     }
   ],
-  "slogan": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
-  "slogan1": "WE MAKING DIFFERENCE TO GREAT THINGS POSSIBLE",
-  "product": {
-    "title": "Sản phẩm - Dịch vụ",
-    "title1": "Định hướng sản phẩm theo nhu cầu của khách hàng",
-    "button1": "Thiết bị nội thất",
-    "button2": "Thiết bị GSE"
-  },
+  "intro": [
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/4.jpg"
+    },
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/3.jpg"
+    },
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/5.jpg"
+    }
+  ],
   "chooseUs": {
-    "services": [
+    "title": "",
+    "items": [
       {
-        "title": "PHÁT TRIỂN SẢN PHẨM TIÊU CHUẨN",
-        "groups": [
-          {
-            "icon": "fa fa-thumbs-up",
-            "title": "Hướng tới khách hàng",
-            "title1": ""
-          },
-          {
-            "icon": "fa fa-share-alt",
-            "title": "Hợp tác - Chia sẻ",
-            "title1": " "
-          }
-        ]
+        "title": "Nhanh chóng, đúng hẹn",
+        "title1": "Trường An cam kết luôn luôn đúng hẹn thời gian hoàn thành",
+        "icon": "ion-ios-stopwatch-outline"
       },
       {
-        "title": "BẢO DƯỠNG - TÙY CHỈNH THEO YÊU CẦU KHÁCH HÀNG",
-        "groups": [
-          {
-            "icon": "fa fa-rocket",
-            "title": "Năng động - Sáng tạo",
-            "title1": " "
-          }
-        ]
+        "title": "Giàu kinh nghiệm",
+        "title1": "Đội ngũ chuyên gia giàu kinh nghiệm trong mọi lĩnh vực hoạt động",
+        "icon": "ion-ios-bookmarks-outline"
       },
       {
-        "title": "HỖ TRỢ SAU BÁN HÀNG",
-        "groups": [
-          {
-            "icon": "fa fa-heart",
-            "title": "Trung thực - Tin cậy",
-            "title1": ""
-          },
-          {
-            "icon": "fa fa-check",
-            "title": "Tuân thủ tuyệt đối",
-            "title1": ""
-          }
-        ]
+        "title": "Ý tưởng sáng tạo",
+        "title1": "Luôn đổi mới, sáng tạo những ý tưởng hay độc đáo mới mẻ trong từng sản phẩm",
+        "icon": "ion-ios-heart-outline"
       }
-    ],
-    "title": "TẠI SAO LỰA CHỌN CHÚNG TÔI",
-    "title0": "KNOW MORE ABOUT OUR COMPANY",
-    "title1": "Xây dựng công ty vững mạnh về tổ chức, có cơ chế quản lý điều hành chặt chẽ, năng động, tích cực hội nhập kinh tế trong nước và quốc tế; có công nghệ tiên tiến hiện đại, bảo toàn năng lực sản xuất."
+    ]
+  },
+  "product": {
+    "title": "Hình ảnh sản phẩm"
   },
   "meetTeam": {
     "title": "MEET WITH OUR TEAM",
-    "title1": "A Quality Experience Team With 4 Years Experience",
+    "title1": "A Quality Experience Team With 10 Years Experience",
     "persons": [
       {
         "img": "/images/team/team1.jpg",
@@ -132,16 +117,15 @@
     }
   ],
   "footer": {
-    "title1": "Giá trị cốt lõi",
-    "title2": "Hình ảnh sản phẩm",
-    "title3": "Thông tin liên hệ",
-    "companyName": "Công ty cổ phần kỹ thuật công nghệ hàng không vũ trụ Tuệ Long.",
-    "director": "Giám đốc",
-    "directorValue": "Hoàng Đăng Toàn",
-    "address": "Địa chỉ",
-    "addressValue": "Xóm Nguyễn, Thôn Tiên Hùng, Nguyên Khê, Đông Anh, Hà Nội"
+    "letter": "Sự tận tâm của Trường An làm hài lòng các khách hàng, những khách hàng không hài lòng sẽ là nguồn tư liệu học hỏi tuyệt vời cho công ty."
   },
   "contact": {
+    "contactTitle": "Liên hệ",
+    "contactInfo": {
+      "address": "Số 5B hẻm 10, ngách 37/27, Phố Dịch Vọng, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội",
+      "email": "techcom.truongan@gmail.com",
+      "phone": "+84 913 297 099"
+    },
     "thanks": "Cảm ơn bạn đã quan tâm, chúng tôi sẽ liên hệ trong thời gian sớm nhất!"
   }
 }

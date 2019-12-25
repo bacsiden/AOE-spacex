@@ -16,9 +16,6 @@
 
 
   <ItemGroup>
-    <Content Update="data\certifications-vn.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Update="data\about-us-en.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

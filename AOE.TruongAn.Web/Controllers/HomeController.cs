@@ -37,7 +37,7 @@ namespace AOE.TruongAn.Web.Controllers
             return Redirect("/Home/Contact?thanks=1");
         }
 
-        public static string lang = "-en";
+        public static string lang = "-vn";
         public IActionResult ChangeLanguage(string url)
         {
             lang = lang == "-vn" ? "-en" : "-vn";
