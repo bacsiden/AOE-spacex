@@ -1,0 +1,24 @@
+﻿{
+  "title": "Giới thiệu",
+  "title1": "Với Sứ mệnh đem đến cho thị trường những sản phẩm - những trải nghiệm hoàn toàn mới về phong cách sống hiện đại, ở bất cứ lĩnh vực nào cũng chứng tỏ vai trò tiên phong.",
+  "items": [
+    {
+      "title": "Về chúng tôi",
+      "icon": "ion-ios-speedometer-outline",
+      "text": "Công ty TNHH Techcom Trường An (gọi tắt là \"Trường An\"), được thành lập năm 2015 trên cơ sở một nhóm chuyên gia nhiệt huyết và nhiều kinh nghiệm trong lĩnh vực công nghệ thông tin và truyền thông",
+      "img": "/img/about-mission.jpg"
+    },
+    {
+      "title": "Sứ mệnh",
+      "icon": "ion-ios-list-outline",
+      "text": "Với mong muốn đem đến cho thị trường những sản phẩm - dịch vụ theo tiêu chuẩn quốc tế và những trải nghiệm hoàn toàn mới về phong cách sống hiện đại",
+      "img": "/img/about-plan.jpg"
+    },
+    {
+      "title": "Tầm nhìn",
+      "icon": "ion-ios-eye-outline",
+      "text": "Với Sứ mệnh đem đến cho thị trường những sản phẩm - những trải nghiệm hoàn toàn mới về phong cách sống hiện đại, ở bất cứ lĩnh vực nào cũng chứng tỏ vai trò tiên phong",
+      "img": "/img/about-vision.jpg"
+    }
+  ]
+}

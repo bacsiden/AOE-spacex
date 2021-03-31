@@ -6,9 +6,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AOE.App.Models;
 using Microsoft.AspNetCore.Authorization;
+using AOE.Application.Models.Framework;
+using System.Security.Claims;
+using AOE.App.Security;
 
 namespace AOE.App.Controllers
 {
+    public class xxEx : Exception
+    {
+        public xxEx() : base("", new NullReferenceException())
+        {
+        }
+    }
+
     [Authorize]
     public class HomeController : Controller
     {
@@ -19,6 +29,7 @@ namespace AOE.App.Controllers
 
         public IActionResult Privacy()
         {
+
             return View();
         }
 

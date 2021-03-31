@@ -45,4 +45,9 @@
     <Folder Include="wwwroot\images\services\" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <None Include="wwwroot\logo.png" />
+  </ItemGroup>
+
 </Project>

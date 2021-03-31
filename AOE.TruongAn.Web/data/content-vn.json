@@ -1,0 +1,131 @@
+﻿{
+  "menus": [
+    {
+      "title": "Home",
+      "link": "#intro",
+      "subs": []
+    },
+    {
+      "title": "Giới thiệu",
+      "link": "#about",
+      "subs": [
+      ]
+    },
+    {
+      "title": "Dịch vụ",
+      "link": "#services",
+      "subs": [
+      ]
+    },
+    {
+      "title": "Đội ngũ",
+      "link": "#team",
+      "subs": []
+    },
+    {
+      "title": "Liên hệ",
+      "link": "#contact",
+      "subs": []
+    }
+  ],
+  "intro": [
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/4.jpg"
+    },
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/3.jpg"
+    },
+    {
+      "title": "BUILDING SOLUTIONS, MAXIMUM COST EFFECTIVENESS!",
+      "title1": "We are making difference to great things possible",
+      "img": "/img/intro-carousel/5.jpg"
+    }
+  ],
+  "chooseUs": {
+    "title": "",
+    "items": [
+      {
+        "title": "Nhanh chóng, đúng hẹn",
+        "title1": "Trường An cam kết luôn luôn đúng hẹn thời gian hoàn thành",
+        "icon": "ion-ios-stopwatch-outline"
+      },
+      {
+        "title": "Giàu kinh nghiệm",
+        "title1": "Đội ngũ chuyên gia giàu kinh nghiệm trong mọi lĩnh vực hoạt động",
+        "icon": "ion-ios-bookmarks-outline"
+      },
+      {
+        "title": "Ý tưởng sáng tạo",
+        "title1": "Luôn đổi mới, sáng tạo những ý tưởng hay độc đáo mới mẻ trong từng sản phẩm",
+        "icon": "ion-ios-heart-outline"
+      }
+    ]
+  },
+  "product": {
+    "title": "Hình ảnh sản phẩm"
+  },
+  "meetTeam": {
+    "title": "MEET WITH OUR TEAM",
+    "title1": "A Quality Experience Team With 10 Years Experience",
+    "persons": [
+      {
+        "img": "/images/team/team1.jpg",
+        "name": "VOSGI VARDUHI",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "/images/team/team1.jpg",
+        "name": "VOSGI VARDUHI",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "/images/team/team1.jpg",
+        "name": "ROBERT ALESKA",
+        "title": "Engineering Structures"
+      },
+      {
+        "img": "/images/team/team1.jpg",
+        "name": "TALINE VOSKI",
+        "title": "Engineering Structures"
+      }
+    ]
+  },
+  "theyTalked": [
+    {
+      "img": "/images/team/testimonial1.jpg",
+      "name": "Narek Bedros",
+      "text": "Sự tận tâm của TAESCO làm hài lòng các khách hàng, những khách hàng không hài lòng sẽ là nguồn tư liệu học hỏi tuyệt vời cho công ty.",
+      "title": "Sr. Manager"
+    }
+  ],
+  "clients": [
+    {
+      "img": "/images/clients/cl1.png"
+    },
+    {
+      "img": "/images/clients/cl2.png"
+    },
+    {
+      "img": "/images/clients/cl3.png"
+    },
+    {
+      "img": "/images/clients/cl4.png"
+    }
+  ],
+  "footer": {
+    "letter": "Sự tận tâm của Trường An làm hài lòng các khách hàng, những khách hàng không hài lòng sẽ là nguồn tư liệu học hỏi tuyệt vời cho công ty."
+  },
+  "contact": {
+    "contactTitle": "Liên hệ",
+    "contactInfo": {
+      "address": "Số 5B hẻm 10, ngách 37/27, Phố Dịch Vọng, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội",
+      "email": "techcom.truongan@gmail.com",
+      "phone": "+84 913 297 099"
+    },
+    "thanks": "Cảm ơn bạn đã quan tâm, chúng tôi sẽ liên hệ trong thời gian sớm nhất!"
+  }
+}

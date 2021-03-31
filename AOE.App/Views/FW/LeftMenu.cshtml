@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+    var url = Context.Request.Path.ToString().ToLower();
+}
+@model List<AOE.Application.Base.Models.LeftMenu>
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item nav-profile">
+            <a href="#" class="nav-link">
+                <div class="profile-image">
+                    <img class="img-xs rounded-circle" src="/images/faces/face8.jpg" alt="profile image">
+                    <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                    <p class="profile-name">Allen Moreno</p>
+                    <p class="designation">Premium user</p>
+                </div>
+            </a>
+        </li>
+        @foreach (var item in Model.OrderBy(m => m.Order))
+        {
+            if (item.Children.Any())
+            {
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#collapse@(item.Id)" aria-expanded="false" aria-controls="collapse@(item.Id)">
+                        <i class="menu-icon"></i>
+                        <span class="menu-title">@item.Title</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="collapse" id="collapse@(item.Id)">
+                        <ul class="nav flex-column sub-menu">
+                            @foreach (var subItem in item.Children.OrderBy(m => m.Order))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" href="@subItem.Link">@subItem.Title</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@item.Link">
+                        <i class="menu-icon"></i>
+                        <span class="menu-title">@item.Title</span>
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+</nav>

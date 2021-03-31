@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AOE.App.Controllers;
+using AOE.App.Security;
 using AOE.App.Services;
 using AOE.Application.Base.Cache;
+using AOE.Application.Base.Database;
 using AOE.Application.Base.Models;
+using AOE.Application.Base.Services;
 using AOE.Application.Models.Framework;
-using AOE.Application.Repositories;
-using AOE.Application.Services;
-using AOE.Database.Repositories;
 using AspNetCore.Identity.Mongo;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
@@ -67,6 +69,10 @@ namespace AOE.App
 
         public void ConfigureIoC(IServiceCollection services)
         {
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IAsyncAuthorizationFilter, CustomAuthorizeAttribute>();
+            services.AddResponseCaching();
             string mongoUrl = Configuration.GetConnectionString("DefaultConnection");
             MongoUrl url = new MongoUrl(mongoUrl);
             IMongoDatabase database = new MongoClient(url).GetDatabase(url.DatabaseName);
@@ -74,9 +80,12 @@ namespace AOE.App
             services.AddScoped<AccountController>();
             services.AddTransient<ICacheManager, MemoryCacheManager>();
             services.AddTransient<IEmailSender, EmailSender>();
-            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IFWService, FWService>();
+            services.AddTransient<IUserFinder, UserFinder>();
 
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ILeftMenuRepository, LeftMenuRepository>();
+            services.AddTransient<IRoleRepository, RoleRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -98,7 +107,7 @@ namespace AOE.App
             app.UseCookiePolicy();
 
             app.UseAuthentication();
-
+            app.UseResponseCaching();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

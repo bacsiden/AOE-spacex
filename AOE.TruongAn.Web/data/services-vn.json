@@ -1,0 +1,36 @@
+﻿{
+  "title": "Sản phẩm, dịch vụ",
+  "title1": "Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.",
+  "items": [
+    {
+      "title": "Cung cấp thiết bị",
+      "title1": "Xuất nhập khẩu các thiết bị, sản phẩm Công nghệ thông tin, điện tử, tự động hóa văn phòng",
+      "icon": "ion-ios-analytics-outline"
+    },
+    {
+      "title": "Cung cấp đường truyền",
+      "title1": "Tư vấn lắp đặt hệ hệ thống mạng, các trung tâm tích hợp dữ liệu, các giải pháp ứng dụng tổng thể về CNTT",
+      "icon": "ion-ios-bookmarks-outline"
+    },
+    {
+      "title": "Bảo trì hệ thống truyền hình",
+      "title1": "Tư vấn, lắp đặt bảo trì hệ thống hội nghị truyền hình, hệ thống trang âm hội nghị và các giải pháp truyền thông phục vụ phòng họp, hội thảo",
+      "icon": "ion-ios-paper-outline"
+    },
+    {
+      "title": "Hệ thống kiểm soát ra vào",
+      "title1": "Lắp đặt các hệ thống kiểm soát ra vào, cửa điện, camera hiện trường và giám sát. Thiết bị chấm công.",
+      "icon": "ion-ios-speedometer-outline"
+    },
+    {
+      "title": "Thiết bị thí nghiệm",
+      "title1": "Lắp đặt các thiết bị thí nghiệm sử dụng cho đào tạo và nghiên cứu trong lĩnh vực CNTT và truyền thông",
+      "icon": "ion-ios-barcode-outline"
+    },
+    {
+      "title": "Hỗ trợ miễn phí",
+      "title1": "Trường An hỗ trợ miễn phí hoàn toàn với tất cả khách hàng, hỗ trợ tư vấn 24/7 kể cả thứ 7 chủ nhật",
+      "icon": "ion-ios-people-outline"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+﻿{
+  "title": "Our Services",
+  "services": [
+    {
+      "title": "Cockpit",
+      "img": "/images/services/buonglai.jpg",
+      "items": [
+        "Onwing repair (onwing)",
+        "Painting Touch up (onwing)",
+        "Cleaning (onwing)"
+      ]
+    },
+    {
+      "title": "Pasenger Seats",
+      "img": "/images/services/ghekhach.jpg",
+      "items": [
+        "Pasenger Seats repair follow CMM/AMM",
+        "Leather/Fabric refresh ",
+        "Leather/Fabric Seat cover Cut and sewing "
+      ]
+    },
+    {
+      "title": "CABIN INTERIOR",
+      "img": "/images/services/khoangcabin.jpg",
+      "items": [
+        "Refresh /Repair side wall, partition lamination",
+        "Carpet, Curtain, NTF fabrication",
+        "Washing/cleaning of seat cover, curtain, carpet"
+      ]
+    },
+    {
+      "title": "Galley",
+      "img": "/images/services/bep.jpg",
+      "items": [
+        "Galley equipment maintenance and repair",
+        "Meal trolley/ Waste trolley, container maintenance",
+        "Part Fabrication"
+      ]
+    },
+    {
+      "title": "Lavatory",
+      "img": "/images/services/buongvesinh.jpg",
+      "items": [
+        "Lavatory equipment  repair ",
+        "Toilet bowl painting ",
+        "Part Fabrication"
+      ]
+    },
+    {
+      "title": "Ground Support Equipment",
+      "img": "/images/services/thietbiGSE.jpg",
+      "items": [
+        "Ground Support Equipment manufacture ",
+        "Ground Support Equipment manufacture  of specification tooling and equipment"
+      ]
+    }
+  ]
+}
