@@ -1,0 +1,43 @@
+﻿@{
+    var data = AOE.Taesco.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "services");
+}
+<div id="banner-area">
+    <img src="/images/banner/banner4.jpg" alt="" />
+    <div class="parallax-overlay"></div>
+    <!-- Subpage title start -->
+    <div class="banner-title-content">
+        <div class="text-center">
+            <h2>@data.title</h2>
+            <ul class="breadcrumb">
+                <li>@(AOE.Taesco.Controllers.HomeController.lang == "-vn" ? "Trang chủ" : "Home") </li>
+                <li> @data.title</li>
+            </ul>
+        </div>
+    </div><!-- Subpage title end -->
+</div><!-- Banner area end -->
+<section id="service" class="service">
+    <div class="container">
+        @for (int i = 0; i < data.services.Count; i += 3)
+        {
+            <div class="row">
+                @for (int j = 0; j < 3 && (i + j) < data.services.Count; j++)
+                {
+                    var item = data.services[i + j];
+                    <div class="col-md-4 col-sm-4 wow fadeInDown" data-wow-delay=".5s">
+                        <div class="service-content">
+                            <span class="service-image"><img class="img-responsive" src="@item.img" alt="" /></span>
+                            <h2 style="font-size: 26px;">@item.title</h2>
+                            @*<span style="font-size: 1.5em">@(((string)item.title)[0])</span><span>@(((string)item.title).Substring(1, ((string)item.title).Length - 1))</span>*@
+                            @foreach (var text in item.items)
+                            {
+                                <p style="color: #00609b"><span class="fa fa-check-circle" style="font-size: 0.8em;color: green;"></span> &nbsp; @text</p>
+                            }
+
+                        </div>
+                    </div>
+                }
+            </div><!-- Content Row end -->
+        }
+
+    </div><!--/ Container end -->
+</section>

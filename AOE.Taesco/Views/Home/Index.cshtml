@@ -1,0 +1,225 @@
+﻿@{
+    var data = AOE.Taesco.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
+}
+<section id="home" class="no-padding">
+    <div id="main-slide" class="cd-hero">
+        <ul class="cd-hero-slider">
+            <li class="selected">
+                <div class="overlay2">
+                    <img class="" src="~/images/slider/bg4.jpg" alt="slider">
+                </div>
+                <div class="cd-full-width">
+                    <h2>@data.slogan</h2>
+                    <h3>@data.slogan1</h3>
+                    @*<a href="#0" class="btn btn-primary white cd-btn">Start Now</a>
+                        <a href="#0" class="btn btn-primary solid cd-btn">Learn More</a>*@
+                </div> <!-- .cd-full-width -->
+            </li>
+        </ul> <!--/ cd-hero-slider -->
+
+    </div><!--/ Main slider end -->
+</section>
+<section id="service" class="service angle">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading text-center">
+                <h2 class="title2">
+                    <span class="title-desc">
+                    </span>
+                </h2>
+            </div>
+        </div> <!-- Title row end -->
+        <div class="row">
+            <div class="col-sm-3 portfolio-static-item">
+                <div class="grid">
+                    <figure class="effect-oscar">
+                        <img src="~/images/csvc/4.jpg" alt="">
+                        <figcaption>
+                            <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/4.jpg"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-sm-3 portfolio-static-item">
+                <div class="grid">
+                    <figure class="effect-oscar">
+                        <img src="~/images/csvc/3.jpg" alt="">
+                        <figcaption>
+                            <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/3.jpg"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="col-sm-3 portfolio-static-item">
+                <div class="grid">
+                    <figure class="effect-oscar">
+                        <img src="~/images/csvc/5.jpg" alt="">
+                        <figcaption>
+                            <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/5.jpg"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+
+            <div class="col-sm-3 portfolio-static-item">
+                <div class="grid">
+                    <figure class="effect-oscar">
+                        <img src="~/images/csvc/2.jpg" alt="">
+                        <figcaption>
+                            <a class="link icon-pentagon" href="portfolio-item.html"><i class="fa fa-link"></i></a>
+                            <a class="view icon-pentagon" data-rel="prettyPhoto" href="~/images/csvc/2.jpg"><i class="fa fa-search"></i></a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div><!--/ Container end -->
+</section><!--/ Service box end -->
+<section id="portfolio" class="portfolio portfolio-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 heading text-center">
+                <h2 class="title2">
+                    @data.product.title
+                    <span class="title-desc">
+                        @data.product.title1
+                    </span>
+                </h2>
+            </div>
+        </div> <!-- Title row end -->
+        <!--Isotope filter start -->
+        <div class="row text-center">
+            <div class="isotope-nav" data-isotope-nav="isotope">
+                <ul style="font-size: 1.4em;">
+                    <li><a href="#" data-filter=".cabin">@data.product.button1</a></li>
+                    <li><a href="#" data-filter=".eq">@data.product.button2</a></li>
+                </ul>
+            </div>
+        </div><!-- Isotope filter end -->
+
+        <div class="row">
+            <div id="isotope" class="isotope">
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin3.jpg" alt="">
+                            <figcaption>
+
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin3.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 cabin isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/cabin4.jpg" alt="">
+                            <figcaption>
+
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/cabin4.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq1.jpg" alt="">
+                            <figcaption>
+
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq1.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="col-sm-3 eq isotope-item">
+                    <div class="grid">
+                        <figure class="effect-oscar">
+                            <img src="/images/product/eq2.jpg" alt="">
+                            <figcaption>
+
+                                <a class="view icon-pentagon" data-rel="prettyPhoto" href="/images/product/eq2.jpg"><i class="fa fa-search"></i></a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div><!-- Isotope content end -->
+        </div><!-- Content row end -->
+    </div><!-- Container end -->
+</section>
+<section id="image-block" class="image-block no-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 ts-padding" style="height:500px;background:url(/images/image-block-bg.jpg) 50% 50% / cover no-repeat;">
+            </div>
+            <div class="col-md-6 ts-padding img-block-right" style="padding-top: 0;">
+                <div class="img-block-head text-center">
+                    <h3>@data.chooseUs.title</h3>
+                    <p>
+                        @data.chooseUs.title1
+                    </p>
+                </div>
+
+                <div class="gap-30"></div>
+                @foreach (var group in data.chooseUs.services)
+                {
+                    foreach (var item in group.groups)
+                    {
+                        <div class="image-block-content" style="margin-bottom: 0;">
+                            <span class="feature-icon pull-left" style="width: 45px; height: 45px; line-height: 45px;"><i class="@item.icon"></i></span>
+                            <div class="feature-content">
+                                <h3 style="padding-top: 9px;">@item.title</h3>
+                                <p style="margin:0">&nbsp; @item.title1</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonial parallax parallax2">
+    <div class="parallax-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div id="testimonial-carousel" class="owl-carousel owl-theme text-center testimonial-slide">
+                @foreach (var item in data.theyTalked)
+                {
+                    <div class="item">
+                        @*<div class="testimonial-thumb">
+                                <img src="@item.img" alt="testimonial">
+                            </div>*@
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                @item.text
+                            </p>
+                            @*<h3 class="name">@item.name<span>@item.title</span></h3>*@
+                        </div>
+                    </div>
+                }
+            </div><!--/ Testimonial carousel end-->
+        </div><!--/ Row end-->
+    </div><!--/  Container end-->
+</section><!--/ Testimonial end-->
+<!-- Clients start -->
+<section id="clients" class="clients" style="padding-top: 20px;padding-bottom: 20px;">
+    <div class="container">
+        <div class="row wow fadeInLeft">
+            <div id="client-carousel" class="col-sm-12 owl-carousel owl-theme text-center client-carousel">
+                @foreach (var item in data.clients)
+                {
+                    <figure class="item client_logo">
+                        <a href="#">
+                            <img src="@item.img" alt="client" style="height: 50px;">
+                        </a>
+                    </figure>
+                }
+            </div><!-- Owl carousel end -->
+        </div><!-- Main row end -->
+    </div><!--/ Container end -->
+</section><!--/ Clients end -->
+<!-- Footer start -->

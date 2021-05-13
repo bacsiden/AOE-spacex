@@ -1,0 +1,52 @@
+﻿{
+  "title0" :  "About Us",
+  "title": "COMPANY PROFILE",
+  "items": [
+    {
+      "id": "tab_1",
+      "titleLeft": "WHO WE ARE",
+      "title": "TUELONG Aerospace Technology Engineering JSC",
+      "icon": "fa fa-briefcase",
+      "texts": [],
+      "text": "<br>Intro day: 08/17/2017<br><br>Address: Nguyen hamlet, Tien Hung village, Nguyen Khe commune, Dong Anh district, Hanoi city, Vietnam"
+    },
+    {
+      "id": "tab_2",
+      "titleLeft": "Core Values",
+      "title": "Standard Development, Maintenance Customization",
+      "icon": "fa fa-support",
+      "texts": [
+        "Towards to Customers",
+        "Dynamic – Creative",
+        "Cooperation – Sharing",
+        "Honesty – Trust",
+        "Absolutely compliance"
+      ],
+      "text": null
+    },
+    {
+      "id": "tab_3",
+      "titleLeft": "Vision",
+      "title": "Vision",
+      "icon": "fa fa-eye",
+      "texts": [
+        "Building a strong company in terms of organization and management closely, dynamically and actively integrate domestic and international economy with  advanced modern technology and preserve production capacity.",
+        "By 2020, become an internationally recognized Cabin interior maintenance service provider.",
+        "By 2025, become ASIA Cabin interior maintenance service provider; accredited by EASA / FAA as Cabin Interior maintenance organization."
+      ],
+      "text": null
+    },
+    {
+      "id": "tab_4",
+      "titleLeft": "Mission",
+      "title": "Mission",
+      "icon": "fa fa-cubes",
+      "texts": [
+        "Sustainable development, ensuring sufficient jobs and income for employees, gradually improving and improving. Establish a mechanism for distributing business and production results in a strict and strict manner, ensuring benefits among laborers, enterprises, the state and society.",
+        "Diversify products, maintain existing products and partners. Research new products, improve and improve the quality of industrial designs; Branding products and corporate brands.",
+        "Proactive domestic and international economic cooperation; Economic production development must ensure sustainability, safety and efficiency."
+      ],
+      "text": null
+    }
+  ]
+}

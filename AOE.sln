@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOE.Database", "AOE.Databas
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOE.TruongAn.Web", "AOE.TruongAn.Web\AOE.TruongAn.Web.csproj", "{8E295037-383C-4834-98C5-D72420072583}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AOE.Taesco", "AOE.Taesco\AOE.Taesco.csproj", "{A279C825-2D01-4B7C-864B-599FE61905EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8E295037-383C-4834-98C5-D72420072583}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E295037-383C-4834-98C5-D72420072583}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E295037-383C-4834-98C5-D72420072583}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A279C825-2D01-4B7C-864B-599FE61905EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A279C825-2D01-4B7C-864B-599FE61905EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A279C825-2D01-4B7C-864B-599FE61905EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A279C825-2D01-4B7C-864B-599FE61905EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

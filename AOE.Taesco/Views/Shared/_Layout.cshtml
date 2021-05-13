@@ -1,0 +1,287 @@
+﻿@{
+    var data = AOE.Taesco.Controllers.HomeController.GetData(ViewContext.HttpContext.Request, "content");
+    var url = ViewContext.RouteData.Values["Action"];
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>TUELONG Aerospace Technology</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- CSS
+    ================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Template styles-->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Responsive styles-->
+    <link rel="stylesheet" href="/css/responsive.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- Prettyphoto -->
+    <link rel="stylesheet" href="/css/prettyPhoto.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="/css/owl.carousel.css">
+    <link rel="stylesheet" href="/css/owl.theme.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="/css/flexslider.css">
+    <!-- Flexslider -->
+    <link rel="stylesheet" href="/css/cd-hero.css">
+    <!-- Style Swicther -->
+    <link id="style-switch" href="/css/presets/preset3.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div class="body-inner">
+
+        <!-- Header start -->
+        <header id="header" class="navbar-fixed-top header" role="banner">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo start -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand navbar-bg" style="background-color: transparent;width: 50%;">
+                            <a href="/"><img class="img-responsive" src="~/images/logo.png" style="width: 182px;height: 60px;" /></a>
+                            @*<a href="/" style="font-weight:900; font-size: 1.7em; color: #143B6A;-webkit-text-stroke: 1px #e9ffe4;">
+                                TAESCO
+                            </a>*@
+                            @*<span style="font-weight:bold; color: #0094ff;" class="logo-details">
+                                    AEROSPACE
+                                </span>
+                                <span style="font-weight:bold; color: #808080;"class="logo-details">
+                                    TECHNOLOGY
+                                </span>*@
+                        </div>
+                    </div><!--/ Logo end -->
+                    <nav class="collapse navbar-collapse clearfix" role="navigation">
+                        <ul class="nav navbar-nav navbar-right">
+                            @foreach (dynamic item in data.menus)
+                            {
+                                <li class="dropdown">
+                                    <a href="@item.link">
+                                        @item.title @if (item.subs.Count > 0)
+                                        {
+                                            <i class="fa fa-angle-down"></i>
+                                        }
+                                    </a>
+                                    @if (item.subs.Count > 0)
+                                    {
+                                        <div class="dropdown-menu">
+                                            <ul>
+                                                @foreach (dynamic item1 in item.subs)
+                                                {
+                                                    <li><a href="@item1.link">@item1.title</a></li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    }
+                                </li>
+                            }
+                            <li>
+                                @if (AOE.Taesco.Controllers.HomeController.lang == "-vn")
+                                {
+                                    <a href="/home/ChangeLanguage?url=@url"><img width="15" height="20" src="~/css/flags/4x3/gb.svg" /></a>
+                                }
+                                else
+                                {
+                                    <a href="/home/ChangeLanguage?url=@url"><img width="15" height="20" src="~/css/flags/4x3/vn.svg" /></a>
+                                }
+
+
+                            </li>
+                        </ul>
+                    </nav><!--/ Navigation end -->
+                </div><!--/ Row end -->
+            </div><!--/ Container end -->
+        </header><!--/ Header end -->
+
+        @RenderBody()
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 footer-widget">
+                        <h3 class="widget-title">@data.footer.title1</h3>
+                        @foreach (var group in data.chooseUs.services)
+                        {
+                            <div class="latest-post-items media">
+                                <div class="latest-post-content media-body">
+                                    <h4><a>@group.title</a></h4>
+                                    @foreach (var item in group.groups)
+                                    {
+                                        <p class="post-meta">
+                                            @item.title
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="col-md-4 col-sm-12 footer-widget">
+                        <h3 class="widget-title">@data.footer.title2</h3>
+
+                        <div class="img-gallery">
+                            <div class="img-container">
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin1.jpg">
+                                    <img src="~/images/product/cabin1.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin2.jpg">
+                                    <img src="~/images/product/cabin2.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin3.jpg">
+                                    <img src="~/images/product/cabin3.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin4.jpg">
+                                    <img src="~/images/product/cabin4.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin5.jpg">
+                                    <img src="~/images/product/cabin5.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/cabin6.jpg">
+                                    <img src="~/images/product/cabin6.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/eq1.jpg">
+                                    <img src="~/images/product/eq1.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/eq2.jpg">
+                                    <img src="~/images/product/eq2.jpg" alt="">
+                                </a>
+                                <a class="thumb-holder" data-rel="prettyPhoto" href="~/images/product/eq3.jpg">
+                                    <img src="~/images/product/eq3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div><!--/ end flickr -->
+
+                    <div class="col-md-4 col-sm-12 footer-widget footer-about-us">
+                        <h3 class="widget-title">@data.footer.title3</h3>
+                        <p>@data.footer.companyName</p>
+                        <h4>@data.footer.address</h4>
+                        <p>@data.footer.addressValue</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Email:</h4>
+                                <p>info@taesco.com</p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 style="text-transform:none">PhONE No.</h4>
+                                <p>(+84) 961 303 589</p>
+                            </div>
+                        </div>
+                        <form action="#" role="form">
+                            <div class="input-group subscribe">
+                                <input type="email" class="form-control" placeholder="Email Address" required="">
+                                <span class="input-group-addon">
+                                    <button class="btn" type="submit"><i class="fa fa-envelope-o"> </i></button>
+                                </span>
+                            </div>
+                        </form>
+                    </div><!--/ end about us -->
+
+                </div><!-- Row end -->
+            </div><!-- Container end -->
+        </footer><!-- Footer end -->
+        <!-- Copyright start -->
+        <section id="copyright" class="copyright angle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <ul class="footer-social unstyled">
+                            <li>
+                                <a title="Twitter" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-twitter"></i></span>
+                                </a>
+                                <a title="Facebook" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-facebook"></i></span>
+                                </a>
+                                <a title="Google+" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-google-plus"></i></span>
+                                </a>
+                                <a title="linkedin" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-linkedin"></i></span>
+                                </a>
+                                <a title="Pinterest" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-pinterest"></i></span>
+                                </a>
+                                <a title="Skype" href="#">
+                                    <span class="icon-pentagon wow bounceIn"><i class="fa fa-skype"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--/ Row end -->
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="copyright-info">
+                            &copy; Copyright 2017 Taesco. <span>Designed by <a href="/">taesco.com</a></span>
+                        </div>
+                    </div>
+                </div><!--/ Row end -->
+                <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top affix">
+                    <button class="btn btn-primary" title="Back to Top"><i class="fa fa-angle-double-up"></i></button>
+                </div>
+            </div><!--/ Container end -->
+        </section><!--/ Copyright end -->
+        <!-- Javascript Files ================================================== -->
+        <!-- initialize jQuery Library -->
+        <script type="text/javascript" src="/js/jquery.js"></script>
+        <!-- Bootstrap jQuery -->
+        <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+        <!-- Style Switcher -->
+        <script type="text/javascript" src="/js/style-switcher.js"></script>
+        <!-- Owl Carousel -->
+        <script type="text/javascript" src="/js/owl.carousel.js"></script>
+        <!-- PrettyPhoto -->
+        <script type="text/javascript" src="/js/jquery.prettyPhoto.js"></script>
+        <!-- Bxslider -->
+        <script type="text/javascript" src="/js/jquery.flexslider.js"></script>
+        <!-- CD Hero slider -->
+        <script type="text/javascript" src="/js/cd-hero.js"></script>
+        <!-- Isotope -->
+        <script type="text/javascript" src="/js/isotope.js"></script>
+        <script type="text/javascript" src="/js/ini.isotope.js"></script>
+        <!-- Wow Animation -->
+        <script type="text/javascript" src="/js/wow.min.js"></script>
+        <!-- SmoothScroll -->
+        @*
+            <script type="text/javascript" src="/js/smoothscroll.js"></script>*@
+        <!-- Eeasing -->
+        <script type="text/javascript" src="/js/jquery.easing.1.3.js"></script>
+        <!-- Counter -->
+        <script type="text/javascript" src="/js/jquery.counterup.min.js"></script>
+        <!-- Waypoints -->
+        <script type="text/javascript" src="/js/waypoints.min.js"></script>
+
+
+        <!-- Template custom -->
+        <script type="text/javascript" src="/js/custom.js"></script>
+        @RenderSection("scripts", required: false)
+    </div><!-- Body inner end -->
+</body>
+</html>
