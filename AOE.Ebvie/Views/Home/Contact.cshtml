@@ -1,4 +1,7 @@
-﻿<div data-elementor-type="wp-page" data-elementor-id="9418" class="elementor elementor-9418" data-elementor-settings="[]">
+﻿@section styles {
+    <link href="/css/inboard/post-171.css" rel="stylesheet" type="text/css" />
+}
+<div data-elementor-type="wp-page" data-elementor-id="9418" class="elementor elementor-9418" data-elementor-settings="[]">
     <div class="elementor-inner">
         <div class="elementor-section-wrap">
             <section class="elementor-section elementor-top-section elementor-element elementor-element-3045291d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3045291d" data-element_type="section">
@@ -632,48 +635,48 @@
                                                                         }
                                                                     </style>
                                                                     <script>
-  var $form = jQuery(".container-form > form");
-  var $success = jQuery(".container-form .bg-success");
+                                                                        var $form = jQuery(".container-form > form");
+                                                                        var $success = jQuery(".container-form .bg-success");
 
-  // Display success message after redirect from SalesForce.
-  if (window.location.search.includes("success=true")) {
-    $success.removeClass("hidden");
-  }
+                                                                        // Display success message after redirect from SalesForce.
+                                                                        if (window.location.search.includes("success=true")) {
+                                                                            $success.removeClass("hidden");
+                                                                        }
 
-  // Add custom validation for international phone numbers.
-  jQuery.validator.addMethod(
-    "internationalPhone",
-    function (value, element) {
-      var regexp = /^\+(?:[0-9] ?){6,14}[0-9]$/;
-      return regexp.test(value);
-    },
-    "Please enter a valid international phone number. Country code is required."
-  );
-  // Add validation of input elements to the contact form using the jQuery Validation Plugin.
-  // Read more about jQuery Validation Plugin at https://jqueryvalidation.org/
-  // The error handling is customized to use Bootstrap`s Form Control Validation to display an error state.
-  // Read more about Bootstrap Form Control Validation at https://getbootstrap.com/docs/3.3/css/#forms-control-validation
-  $form.validate({
-    errorClass: "help-block",
-    errorElement: "span",
-    errorPlacement: function (error, element) {
-      // Place the error message after the input. If the input is a checkbox then we do not display the error message.
-      if (jQuery(element).attr("type") !== "checkbox") {
-        jQuery(element).after(error);
-      }
-    },
-    highlight: function (element) {
-      jQuery(element).closest(".form-group").addClass("has-error");
-    },
-    unhighlight: function (element) {
-      jQuery(element).closest(".form-group").removeClass("has-error");
-    },
-    rules: {
-      mobile: {
-        internationalPhone: true,
-      },
-    },
-  });
+                                                                        // Add custom validation for international phone numbers.
+                                                                        jQuery.validator.addMethod(
+                                                                            "internationalPhone",
+                                                                            function (value, element) {
+                                                                                var regexp = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+                                                                                return regexp.test(value);
+                                                                            },
+                                                                            "Please enter a valid international phone number. Country code is required."
+                                                                        );
+                                                                        // Add validation of input elements to the contact form using the jQuery Validation Plugin.
+                                                                        // Read more about jQuery Validation Plugin at https://jqueryvalidation.org/
+                                                                        // The error handling is customized to use Bootstrap`s Form Control Validation to display an error state.
+                                                                        // Read more about Bootstrap Form Control Validation at https://getbootstrap.com/docs/3.3/css/#forms-control-validation
+                                                                        $form.validate({
+                                                                            errorClass: "help-block",
+                                                                            errorElement: "span",
+                                                                            errorPlacement: function (error, element) {
+                                                                                // Place the error message after the input. If the input is a checkbox then we do not display the error message.
+                                                                                if (jQuery(element).attr("type") !== "checkbox") {
+                                                                                    jQuery(element).after(error);
+                                                                                }
+                                                                            },
+                                                                            highlight: function (element) {
+                                                                                jQuery(element).closest(".form-group").addClass("has-error");
+                                                                            },
+                                                                            unhighlight: function (element) {
+                                                                                jQuery(element).closest(".form-group").removeClass("has-error");
+                                                                            },
+                                                                            rules: {
+                                                                                mobile: {
+                                                                                    internationalPhone: true,
+                                                                                },
+                                                                            },
+                                                                        });
                                                                     </script>
                                                                 </div>
                                                             </div>
