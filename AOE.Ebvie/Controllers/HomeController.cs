@@ -20,7 +20,7 @@ namespace AOE.Ebvie.Controllers
 
         public IActionResult AboutUs() => View();
 
-        public IActionResult OutTeam() => View();
+        public IActionResult OurTeam() => View();
 
         public IActionResult Investor() => View();
 
