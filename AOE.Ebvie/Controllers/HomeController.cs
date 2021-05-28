@@ -15,6 +15,8 @@ namespace AOE.Ebvie.Controllers
         }
 
         public IActionResult Index() => View();
+        public IActionResult Overview() => View();
+        public IActionResult Concepts() => View();
         public IActionResult InBoard() => View();
         public IActionResult OutBoard() => View();
 
